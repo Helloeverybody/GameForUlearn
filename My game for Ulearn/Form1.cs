@@ -24,5 +24,10 @@ namespace My_game_for_Ulearn
             if (result != DialogResult.Yes)
                 eventArgs.Cancel = true;
         }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+        }
     }
 }
