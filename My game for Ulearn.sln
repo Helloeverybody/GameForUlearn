@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My game for Ulearn", "My game for Ulearn\My game for Ulearn.csproj", "{F52D53D2-C800-48A1-A72B-9BA7E50AE30A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F52D53D2-C800-48A1-A72B-9BA7E50AE30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52D53D2-C800-48A1-A72B-9BA7E50AE30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52D53D2-C800-48A1-A72B-9BA7E50AE30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52D53D2-C800-48A1-A72B-9BA7E50AE30A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.exe.config
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.exe
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.pdb
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\obj\Debug\My game for Ulearn.csprojAssemblyReference.cache
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.Properties.Resources.resources
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.GenerateResource.cache
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CoreCompileInputs.cache
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.exe
+C:\Users\Vsevolod\RiderProjects\My game for Ulearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.pdb
