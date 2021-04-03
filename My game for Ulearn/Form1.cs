@@ -29,5 +29,7 @@ namespace My_game_for_Ulearn
         {
             base.OnPaint(e);
         }
+        
+        //еще один тест коммита, уже из rider
     }
 }
