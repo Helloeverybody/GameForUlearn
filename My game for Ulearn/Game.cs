@@ -12,24 +12,16 @@ namespace My_game_for_Ulearn
 {
     public partial class Form1 : Form
     {
+        Player Player = new Player(0, 0);
         public Form1()
         {
             InitializeComponent();
         }
         
-        protected override void OnFormClosing(FormClosingEventArgs eventArgs)
-        {
-            var result = MessageBox.Show("Действительно закрыть?", "",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result != DialogResult.Yes)
-                eventArgs.Cancel = true;
-        }
-
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
+            var g = e.Graphics;
+            g.DrawImageUnscaled(Player.playerSprite, 100, -100);
         }
-        
-        //еще один тест коммита, уже из rider
     }
 }

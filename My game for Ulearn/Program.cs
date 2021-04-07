@@ -14,8 +14,6 @@ namespace My_game_for_Ulearn
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
     }
