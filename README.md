@@ -1,2 +1,2 @@
-# Game-about-the-Hedgehog
+# Game for Ulearn
 Эта игра про ежа
