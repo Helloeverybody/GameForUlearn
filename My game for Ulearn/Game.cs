@@ -16,12 +16,34 @@ namespace My_game_for_Ulearn
         public Form1()
         {
             InitializeComponent();
+            KeyPress += new KeyEventHandler(MainForm_KeyPressed(this,));
         }
         
         protected override void OnPaint(PaintEventArgs e)
         {
             var g = e.Graphics;
-            g.DrawImageUnscaled(Player.playerSprite, 100, -100);
+            g.DrawImage(Player.playerSprite, Player.X, Player.Y);
+        }
+        
+        void MainForm_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 'w')
+            {
+                Player.Y += 1;
+                Console.WriteLine($"{Player.X}");
+            }
+            if (e.KeyChar == 'a')
+            {
+                Player.X -= 1;
+            }
+            if (e.KeyChar == 's')
+            {
+                Player.Y -= 1;
+            }
+            if (e.KeyChar == 'd')
+            {
+                Player.X += 1;
+            }
         }
     }
 }

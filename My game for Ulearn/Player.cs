@@ -10,8 +10,8 @@ namespace My_game_for_Ulearn
             Y = y;
             playerSprite = Image.FromFile(@"C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\Assets\Sprite-0001.png");
         }
-        public float X;
-        public float Y;
+        public float X = 0;
+        public float Y = 0;
         public Image playerSprite;
     }
 }
