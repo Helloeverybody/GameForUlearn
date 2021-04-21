@@ -11,23 +11,30 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="save 07.04.21 22:13">
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Control.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Inventory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Map.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Monster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Dialog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/GameObjectState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/GameState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/GameStates/Game.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/GameStates/MainMenue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Item.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Scales/Scale.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Scales/madnessScale.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Vector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/View/View.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Control.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Control/Control.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Monster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/My game for Ulearn.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/My game for Ulearn.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Model/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
     </list>
@@ -47,9 +54,31 @@
       <option value="$PROJECT_DIR$/My game for Ulearn/Map.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Monster.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Inventory.cs" />
-      <option value="$PROJECT_DIR$/My game for Ulearn/Player.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Control.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Player.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Control/Control.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Model.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/View/View.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Map.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Monster.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/GameStates.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/GameObjectStates.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/GameState.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Bar.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Menue.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Scale.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Game.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/madnessScale.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/GameStates/Menue.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Scales/Scale.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Scales/madnessScale.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Dialog.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Vector.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Player.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Inventory.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Item.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -106,7 +135,13 @@
       <workItem from="1617808489499" duration="1369000" />
       <workItem from="1617811535265" duration="3745000" />
       <workItem from="1618159519306" duration="916000" />
-      <workItem from="1618165101297" duration="5139000" />
+      <workItem from="1618165101297" duration="5383000" />
+      <workItem from="1618174202320" duration="168000" />
+      <workItem from="1618336141599" duration="1940000" />
+      <workItem from="1618384767564" duration="8722000" />
+      <workItem from="1618927986179" duration="3806000" />
+      <workItem from="1618939030741" duration="5131000" />
+      <workItem from="1618980903297" duration="17535000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>
@@ -122,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617815598839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="save 12.04.21 1:14">
+      <created>1618172126053</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618172126053</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +235,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="test commit from rider" />
     <MESSAGE value="save 07.04.21 22:13" />
-    <option name="LAST_COMMIT_MESSAGE" value="save 07.04.21 22:13" />
+    <MESSAGE value="save 12.04.21 1:14" />
+    <option name="LAST_COMMIT_MESSAGE" value="save 12.04.21 1:14" />
   </component>
 </project>
