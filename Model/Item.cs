@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace My_game_for_Ulearn.Model
+namespace Model
 {
     public class Item
     {

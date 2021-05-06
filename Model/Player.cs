@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
-namespace My_game_for_Ulearn.Model
+namespace Model
 {
     public class Player
     {
-        public float X;
-        public float Y;
+        public int X;
+        public int Y;
         public Image playerSprite;
-        private const float maxSpeed = 3;
+        private const int maxSpeed = 3;
         public Vector move = Vector.Zero;
         public double speed;
 
@@ -18,7 +17,7 @@ namespace My_game_for_Ulearn.Model
         public bool WalkRight = false;
         public bool WalkLeft = false;
         
-        public Player(float x, float y)
+        public Player(int x, int y)
         {
             X = x;
             Y = y;
@@ -26,7 +25,7 @@ namespace My_game_for_Ulearn.Model
             playerSprite = Image.FromFile(path);
         }
         
-        public Player(PointF point)
+        public Player(Point point)
         {
             X = point.X;
             Y = point.X;

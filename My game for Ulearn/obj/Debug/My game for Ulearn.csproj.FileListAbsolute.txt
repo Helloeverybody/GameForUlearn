@@ -27,3 +27,6 @@ D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.
 D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CoreCompileInputs.cache
 D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.exe
 D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.pdb
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Debug\Model.dll
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Debug\Model.pdb
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CopyComplete

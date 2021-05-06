@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace My_game_for_Ulearn.Model
+namespace Model
 {
     public class Vector
     {
-        public float X;
-        public float Y;
+        public int X;
+        public int Y;
 
         public double Length => Math.Sqrt(X * X + Y * Y);
         public double Angle => Math.Acos(X/Length);
         
-        public Vector(float x, float y)
+        public Vector(int x, int y)
         {
             X = x;
             Y = y;

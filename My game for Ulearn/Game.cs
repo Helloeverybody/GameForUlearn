@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using My_game_for_Ulearn.Model;
+using Model;
 
 namespace My_game_for_Ulearn
 {
@@ -25,7 +25,7 @@ namespace My_game_for_Ulearn
             Player = new Player(Size.Width / 2, Size.Height / 2);
             Map = new Map(Size.Width, Size.Height);
             
-            timer = new Timer {Interval = 10};
+            timer = new Timer { Interval = 16 };
             timer.Start();
             timer.Tick += OnTick;
             
@@ -42,18 +42,21 @@ namespace My_game_for_Ulearn
         private void OnTick(object sender, EventArgs e)
         {
             Player.Translate();
-            //TODO 1. распараллелить RevaluateDistrict, 2. переделать условие пересчета RevaluateDistrict
-            //Map.Anchor = new Point(0, 0);
-            //Map.RevaluateDistrict(Size.Height, Size.Width); 
+            Map.Anchor = new Point(Player.X - Size.Width / 2, Player.Y - Size.Height / 2);
             
-            //Invalidate(); не понятно, чем отличаются от Refresh
+            //Invalidate(); не понятно, чем отличается от Refresh
             Refresh(); 
         }
         
         private void OnPaintUpdate(object sender, PaintEventArgs e)
         {
+            //ToDo убрать фризы при передвижении
             var g = e.Graphics;
-            g.DrawImage(Player.playerSprite, Player.X, Player.Y, 50,50);
+            var size = new Size(Size.Width * 4, Size.Height * 4);
+            var rect = new Rectangle(Map.Anchor, size);
+            g.DrawImage(Map.mapSprite, rect, 0, 0, Size.Width, Size.Height, GraphicsUnit.Point);
+            g.DrawImage(Player.playerSprite, Size.Width / 2, Size.Height / 2, 50,50);
+            
         }
         
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -66,12 +69,21 @@ namespace My_game_for_Ulearn
             HandleKey(e.KeyCode, false);
         }
         
+        //Управление подвижным игроком на неподвижной карте
+        // private void HandleKey(Keys key, bool value)
+        // {
+        //     if (key == Keys.A || key == Keys.Left) Player.WalkLeft = value;
+        //     if (key == Keys.D || key == Keys.Right) Player.WalkRight = value;
+        //     if (key == Keys.W || key == Keys.Up)Player.WalkForward = value;
+        //     if (key == Keys.S || key == Keys.Down) Player.WalkBackward = value;
+        // }
+        
         private void HandleKey(Keys key, bool value)
         {
-            if (key == Keys.A || key == Keys.Left) Player.WalkLeft = value;
-            if (key == Keys.D || key == Keys.Right) Player.WalkRight = value;
-            if (key == Keys.W || key == Keys.Up)Player.WalkForward = value;
-            if (key == Keys.S || key == Keys.Down) Player.WalkBackward = value;
+            if (key == Keys.A || key == Keys.Left) Player.WalkRight = value;
+            if (key == Keys.D || key == Keys.Right) Player.WalkLeft = value;
+            if (key == Keys.W || key == Keys.Up)Player.WalkBackward = value;
+            if (key == Keys.S || key == Keys.Down) Player.WalkForward = value;
         }
     }
 }

@@ -1,0 +1,6 @@
+D:\Games\Projects\GameForUlearn\Model\bin\Debug\Model.dll
+D:\Games\Projects\GameForUlearn\Model\bin\Debug\Model.pdb
+D:\Games\Projects\GameForUlearn\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Games\Projects\GameForUlearn\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Games\Projects\GameForUlearn\Model\obj\Debug\Model.dll
+D:\Games\Projects\GameForUlearn\Model\obj\Debug\Model.pdb
