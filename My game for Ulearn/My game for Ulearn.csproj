@@ -94,9 +94,5 @@
     <ItemGroup>
         <None Include="App.config" />
     </ItemGroup>
-    <ItemGroup>
-      <Content Include="Assets\Map.png" />
-      <Content Include="Assets\Sprite-0001.png" />
-    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

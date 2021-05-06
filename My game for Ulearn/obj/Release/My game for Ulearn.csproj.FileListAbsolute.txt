@@ -1,0 +1,10 @@
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Release\My_game_for_Ulearn.exe.config
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Release\My_game_for_Ulearn.exe
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Release\My_game_for_Ulearn.pdb
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Release\My game for Ulearn.csprojAssemblyReference.cache
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Release\My_game_for_Ulearn.Form1.resources
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Release\My_game_for_Ulearn.Properties.Resources.resources
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Release\My game for Ulearn.csproj.GenerateResource.cache
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Release\My game for Ulearn.csproj.CoreCompileInputs.cache
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Release\My_game_for_Ulearn.exe
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Release\My_game_for_Ulearn.pdb

@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace My_game_for_Ulearn.Model
 {
@@ -7,7 +9,7 @@ namespace My_game_for_Ulearn.Model
         public float X;
         public float Y;
         public Image playerSprite;
-        private const float maxSpeed = 10;
+        private const float maxSpeed = 3;
         public Vector move = Vector.Zero;
         public double speed;
 
@@ -20,7 +22,16 @@ namespace My_game_for_Ulearn.Model
         {
             X = x;
             Y = y;
-            playerSprite = Image.FromFile(@"C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\Assets\Sprite-0001.png");
+            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
+            playerSprite = Image.FromFile(path);
+        }
+        
+        public Player(PointF point)
+        {
+            X = point.X;
+            Y = point.X;
+            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
+            playerSprite = Image.FromFile(path);
         }
         
         public void Translate()

@@ -17,3 +17,13 @@ C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My 
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CoreCompileInputs.cache
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.exe
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.pdb
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.exe.config
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.exe
+D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.pdb
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csprojAssemblyReference.cache
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.Form1.resources
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.Properties.Resources.resources
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.GenerateResource.cache
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CoreCompileInputs.cache
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.exe
+D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.pdb
