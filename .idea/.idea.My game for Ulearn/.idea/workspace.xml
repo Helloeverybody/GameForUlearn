@@ -12,40 +12,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="4 неделя, убрал баг с мерцанием персонажа, починил управление, начал прописывать класс Map (метод пересчета отображаемого участка карты)">
-      <change afterPath="$PROJECT_DIR$/Model/Model.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CopyComplete" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn.sln" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Vector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Vector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Dialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/GameObjectState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/GameObjectState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/GameStates/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/GameStates/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/GameStates/MainMenue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/GameStates/MainMenue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Map.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Monster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Scales/Scale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Scales/Scale.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Scales/madnessScale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Scales/madnessScale.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Model/Vector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Vector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/My game for Ulearn.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/My game for Ulearn.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
@@ -59,10 +42,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Model/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/06/7efdb8d0/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -104,10 +87,10 @@
       <option value="$PROJECT_DIR$/Model/Scales/Scale.cs" />
       <option value="$PROJECT_DIR$/Model/GameStates/Game.cs" />
       <option value="$PROJECT_DIR$/Model/GameStates/MainMenue.cs" />
-      <option value="$PROJECT_DIR$/Model/Player.cs" />
-      <option value="$PROJECT_DIR$/Model/Vector.cs" />
       <option value="$PROJECT_DIR$/Model/Map.cs" />
+      <option value="$PROJECT_DIR$/Model/Vector.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
+      <option value="$PROJECT_DIR$/Model/Player.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -120,7 +103,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.6746167" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.6749226" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -178,6 +161,7 @@
       <workItem from="1620217507705" duration="7239000" />
       <workItem from="1620228964222" duration="7650000" />
       <workItem from="1620288734059" duration="10473000" />
+      <workItem from="1620577024725" duration="8819000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>

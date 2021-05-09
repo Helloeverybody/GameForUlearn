@@ -25,7 +25,7 @@ namespace My_game_for_Ulearn
             Player = new Player(Size.Width / 2, Size.Height / 2);
             Map = new Map(Size.Width, Size.Height);
             
-            timer = new Timer { Interval = 16 };
+            timer = new Timer { Interval = 1 };
             timer.Start();
             timer.Tick += OnTick;
             
@@ -50,7 +50,6 @@ namespace My_game_for_Ulearn
         
         private void OnPaintUpdate(object sender, PaintEventArgs e)
         {
-            //ToDo убрать фризы при передвижении
             var g = e.Graphics;
             var size = new Size(Size.Width * 4, Size.Height * 4);
             var rect = new Rectangle(Map.Anchor, size);
@@ -82,7 +81,7 @@ namespace My_game_for_Ulearn
         {
             if (key == Keys.A || key == Keys.Left) Player.WalkRight = value;
             if (key == Keys.D || key == Keys.Right) Player.WalkLeft = value;
-            if (key == Keys.W || key == Keys.Up)Player.WalkBackward = value;
+            if (key == Keys.W || key == Keys.Up)Player.WalkBack = value;
             if (key == Keys.S || key == Keys.Down) Player.WalkForward = value;
         }
     }

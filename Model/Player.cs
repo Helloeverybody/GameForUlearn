@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 namespace Model
@@ -8,12 +9,12 @@ namespace Model
         public int X;
         public int Y;
         public Image playerSprite;
-        private const int maxSpeed = 3;
+        private const int maxSpeed = 5;
         public Vector move = Vector.Zero;
-        public double speed;
+        //public double speed;
 
         public bool WalkForward = false;
-        public bool WalkBackward = false;
+        public bool WalkBack = false;
         public bool WalkRight = false;
         public bool WalkLeft = false;
         
@@ -35,17 +36,27 @@ namespace Model
         
         public void Translate()
         {
-            if (WalkForward)
-                move += new Vector(0, -1);
-            if (WalkBackward)
-                move += new Vector(0, 1);
-            if (WalkRight)
-                move += new Vector(1, 0);
-            if (WalkLeft)
-                move += new Vector(-1, 0);
-
-            X = maxSpeed * move.X;
-            Y = maxSpeed * move.Y;
+            if (!(WalkBack || WalkForward || WalkLeft || WalkRight))
+                move = Vector.Zero;
+            else if (WalkForward && WalkRight)
+                move = new Vector((int)Math.Sqrt(2), -(int)Math.Sqrt(2));
+            else if (WalkForward && WalkLeft)
+                move = new Vector(-(int)Math.Sqrt(2), -(int)Math.Sqrt(2));
+            else if (WalkBack && WalkRight)
+                move = new Vector((int)Math.Sqrt(2), (int)Math.Sqrt(2));
+            else if (WalkBack && WalkLeft)
+                move = new Vector(-(int)Math.Sqrt(2), (int)Math.Sqrt(2));
+            else if (WalkForward)
+                move = new Vector(0, -1);
+            else if (WalkBack)
+                move = new Vector(0, 1);
+            else if (WalkRight)
+                move = new Vector(1, 0);
+            else if (WalkLeft)
+                move = new Vector(-1, 0);
+            
+            X += maxSpeed * move.X;
+            Y += maxSpeed * move.Y;
         }
     }
 }

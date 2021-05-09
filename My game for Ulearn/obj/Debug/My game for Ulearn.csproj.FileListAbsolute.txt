@@ -30,3 +30,6 @@ D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.
 D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Debug\Model.dll
 D:\Games\Projects\GameForUlearn\My game for Ulearn\bin\Debug\Model.pdb
 D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CopyComplete
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\bin\Debug\Model.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\bin\Debug\Model.pdb
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CopyComplete
