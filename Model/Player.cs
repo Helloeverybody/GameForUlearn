@@ -9,7 +9,7 @@ namespace Model
         public int X;
         public int Y;
         public Image playerSprite;
-        private const int maxSpeed = 5;
+        private const int maxSpeed = 1;
         public Vector move = Vector.Zero;
         //public double speed;
 
@@ -39,21 +39,21 @@ namespace Model
             if (!(WalkBack || WalkForward || WalkLeft || WalkRight))
                 move = Vector.Zero;
             else if (WalkForward && WalkRight)
-                move = new Vector((int)Math.Sqrt(2), -(int)Math.Sqrt(2));
+                move = new Vector(4, -4) * (int) Math.Sqrt(2);
             else if (WalkForward && WalkLeft)
-                move = new Vector(-(int)Math.Sqrt(2), -(int)Math.Sqrt(2));
+                move = new Vector(-4, -4) * (int) Math.Sqrt(2);
             else if (WalkBack && WalkRight)
-                move = new Vector((int)Math.Sqrt(2), (int)Math.Sqrt(2));
+                move = new Vector(4, 4) * (int) Math.Sqrt(2);
             else if (WalkBack && WalkLeft)
-                move = new Vector(-(int)Math.Sqrt(2), (int)Math.Sqrt(2));
+                move = new Vector(-4, 4) * (int) Math.Sqrt(2);
             else if (WalkForward)
-                move = new Vector(0, -1);
+                move = new Vector(0, -5);
             else if (WalkBack)
-                move = new Vector(0, 1);
+                move = new Vector(0, 5);
             else if (WalkRight)
-                move = new Vector(1, 0);
+                move = new Vector(5, 0);
             else if (WalkLeft)
-                move = new Vector(-1, 0);
+                move = new Vector(-5, 0);
             
             X += maxSpeed * move.X;
             Y += maxSpeed * move.Y;

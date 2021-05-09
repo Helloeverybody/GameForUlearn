@@ -18,6 +18,7 @@ namespace My_game_for_Ulearn
         private Map Map;
         private Player Player;
         private readonly Timer timer;
+        private readonly Timer drawTimer;
         public Form1()
         {
             InitializeComponent();
@@ -25,9 +26,13 @@ namespace My_game_for_Ulearn
             Player = new Player(Size.Width / 2, Size.Height / 2);
             Map = new Map(Size.Width, Size.Height);
             
-            timer = new Timer { Interval = 1 };
+            timer = new Timer { Interval = 30 };
             timer.Start();
             timer.Tick += OnTick;
+            
+            drawTimer = new Timer { Interval = 1 };
+            drawTimer.Start();
+            drawTimer.Tick += OnTickPaint;
             
             Paint += OnPaintUpdate;
             KeyDown += Form1_KeyDown;
@@ -43,11 +48,13 @@ namespace My_game_for_Ulearn
         {
             Player.Translate();
             Map.Anchor = new Point(Player.X - Size.Width / 2, Player.Y - Size.Height / 2);
-            
+        }
+        
+        private void OnTickPaint(object sender, EventArgs e)
+        {
             //Invalidate(); не понятно, чем отличается от Refresh
             Refresh(); 
         }
-        
         private void OnPaintUpdate(object sender, PaintEventArgs e)
         {
             var g = e.Graphics;

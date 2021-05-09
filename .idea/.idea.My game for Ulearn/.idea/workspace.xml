@@ -11,14 +11,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="4 неделя, убрал баг с мерцанием персонажа, починил управление, начал прописывать класс Map (метод пересчета отображаемого участка карты)">
+    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="Другой вариант движения по диагонали (пока не очень рабочий)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Vector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Vector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.cs" afterDir="false" />
@@ -26,9 +23,6 @@
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
@@ -44,8 +38,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Model/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/06/7efdb8d0/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/My game for Ulearn/Game.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/My game for Ulearn/Game.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -89,8 +85,8 @@
       <option value="$PROJECT_DIR$/Model/GameStates/MainMenue.cs" />
       <option value="$PROJECT_DIR$/Model/Map.cs" />
       <option value="$PROJECT_DIR$/Model/Vector.cs" />
-      <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
       <option value="$PROJECT_DIR$/Model/Player.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -240,17 +236,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
               <option name="COLUMN_ID_WIDTH">
                 <map>
                   <entry key="Table.Default.Author.ColumnIdWidth" value="69" />
