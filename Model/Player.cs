@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 namespace Model
 {
@@ -36,27 +37,30 @@ namespace Model
         
         public void Translate()
         {
-            if (!(WalkBack || WalkForward || WalkLeft || WalkRight))
-                move = Vector.Zero;
+            if (WalkForward && WalkLeft)
+                move += new Vector(-7, -7);
             else if (WalkForward && WalkRight)
-                move = new Vector(4, -4) * (int) Math.Sqrt(2);
-            else if (WalkForward && WalkLeft)
-                move = new Vector(-4, -4) * (int) Math.Sqrt(2);
-            else if (WalkBack && WalkRight)
-                move = new Vector(4, 4) * (int) Math.Sqrt(2);
+                move += new Vector(7, -7);
             else if (WalkBack && WalkLeft)
-                move = new Vector(-4, 4) * (int) Math.Sqrt(2);
+                move += new Vector(-7, 7);
+            else if (WalkBack && WalkRight)
+                move += new Vector(7, 7);
             else if (WalkForward)
-                move = new Vector(0, -5);
+                move += new Vector(0, -10);
             else if (WalkBack)
-                move = new Vector(0, 5);
+                move += new Vector(0, 10);
             else if (WalkRight)
-                move = new Vector(5, 0);
+                move += new Vector(10, 0);
             else if (WalkLeft)
-                move = new Vector(-5, 0);
-            
-            X += maxSpeed * move.X;
-            Y += maxSpeed * move.Y;
+                move += new Vector(-10, 0);
+
+            X = maxSpeed * move.X;
+            Y = maxSpeed * move.Y;
+        }
+
+        public List<OnMapItem> CheckForItems(IEnumerable<OnMapItem> items)
+        {
+            return items.Where(x => x.IsNearby(X, Y)).ToList();
         }
     }
 }

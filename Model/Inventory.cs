@@ -4,21 +4,21 @@ namespace Model
 {
     public class Inventory
     {
-        private List<Item> inventory = new List<Item>();
+        private List<OnMapItem> inventory = new List<OnMapItem>();
 
-        public void Add(Item item)
+        public void Add(OnMapItem onMapItem)
         {
-            inventory.Add(item);
+            inventory.Add(onMapItem);
         }
 
-        public void Delete(Item item)
+        public void Delete(OnMapItem onMapItem)
         {
-            inventory.Remove(item);
+            inventory.Remove(onMapItem);
         }
         
         public void Clear()
         {
-            inventory = new List<Item>();
+            inventory = new List<OnMapItem>();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Model
         public Bitmap mapSprite;
         public Bitmap currentDistrict;
         public Point Anchor;
-        public Map(int width, int height)
+        public Map()
         {
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Map.png";
             mapSprite = (Bitmap)Image.FromFile(path);
