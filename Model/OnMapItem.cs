@@ -23,7 +23,7 @@ namespace Model
 
         public bool IsNearby(int x, int y)
         {
-            return Math.Sqrt((x - X) * (x - X) + (y - Y) * (y - Y)) <= 50;
+            return Math.Sqrt((x - X * 2) * (x - X * 2) + (y - Y* 2) * (y - Y* 2)) <= 70;
         }
     }
 }

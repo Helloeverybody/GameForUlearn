@@ -72,17 +72,24 @@ namespace My_game_for_Ulearn
                 g.DrawImage(item.ItemSprite, rect, 0, 0, Size.Width, Size.Height, GraphicsUnit.Point);
             
             var nearbyItems = Player.CheckForItems(itemsOnMap);
-            var itemSize = new Size(Size.Width, Size.Height);
-            var itemRect = new Rectangle(Map.Anchor, size);
             foreach (var item in nearbyItems)
             {
                 g.DrawImage(Player.playerSprite, rect, 0, 0, Size.Width, Size.Height, GraphicsUnit.Point);
             }
+            
+            var a = new Dialog("Это тестовоый диалог.");
+            a.DrawDialog(g, Size);
         }
-        
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             HandleKey(e.KeyCode, true);
+            
+            if (e.KeyCode == Keys.E)
+            {
+                var dialog = new Dialog("Это тестовоый диалог.");
+                //DrawDialog(dialog, graphics, Size);
+            }
         }
         
         private void Form1_KeyUp(object sender, KeyEventArgs e)

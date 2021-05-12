@@ -55,7 +55,7 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="View\View.cs" />
+        <Compile Include="View\Drawer.cs" />
         <EmbeddedResource Include="Game.resx">
           <DependentUpon>Game.cs</DependentUpon>
         </EmbeddedResource>

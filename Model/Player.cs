@@ -10,9 +10,12 @@ namespace Model
         public int X;
         public int Y;
         public Image playerSprite;
+        
+        //public double speed;
         private const int maxSpeed = 1;
         public Vector move = Vector.Zero;
-        //public double speed;
+        
+        public Inventory Inventory { get; set; }
 
         public bool WalkForward = false;
         public bool WalkBack = false;
@@ -60,7 +63,7 @@ namespace Model
 
         public List<OnMapItem> CheckForItems(IEnumerable<OnMapItem> items)
         {
-            return items.Where(x => x.IsNearby(X, Y)).ToList();
+            return items.Where(item => item.IsNearby(X, Y)).ToList();
         }
     }
 }

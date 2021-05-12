@@ -12,25 +12,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/InventoryItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Assets/Item.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Assets/DialogBackground.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Dialog.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/OnMapItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Map.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/InventoryItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/OnMapItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/OnMapItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/My game for Ulearn.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/My game for Ulearn.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/View/View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/View/Drawer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
@@ -44,10 +44,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/Model/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Model/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/78/4f707c6a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/06/7efdb8d0/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/65/aa42de5b/Control.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/e5/1dcf6db2/Graphics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Documents/GitHub/Immunity-Game/Assets/Scripts/PathData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/My game for Ulearn/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -79,10 +82,8 @@
       <option value="$PROJECT_DIR$/My game for Ulearn/Model/Player.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Model/Map.cs" />
       <option value="$PROJECT_DIR$/Model/Class1.cs" />
-      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
       <option value="$PROJECT_DIR$/Model/GameObjectState.cs" />
       <option value="$PROJECT_DIR$/Model/GameState.cs" />
-      <option value="$PROJECT_DIR$/Model/Inventory.cs" />
       <option value="$PROJECT_DIR$/Model/Monster.cs" />
       <option value="$PROJECT_DIR$/Model/Scales/madnessScale.cs" />
       <option value="$PROJECT_DIR$/Model/Scales/Scale.cs" />
@@ -91,11 +92,15 @@
       <option value="$PROJECT_DIR$/Model/Vector.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" />
       <option value="$PROJECT_DIR$/Model/Item.cs" />
-      <option value="$PROJECT_DIR$/Model/InventoryItem.cs" />
-      <option value="$PROJECT_DIR$/Model/OnMapItem.cs" />
       <option value="$PROJECT_DIR$/Model/Map.cs" />
-      <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
+      <option value="$USER_HOME$/Documents/GitHub/Immunity-Game/Assets/Scripts/PathData.cs" />
+      <option value="$PROJECT_DIR$/Model/Inventory.cs" />
+      <option value="$PROJECT_DIR$/Model/InventoryItem.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/View/Drawer.cs" />
       <option value="$PROJECT_DIR$/Model/Player.cs" />
+      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Model/OnMapItem.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -167,7 +172,13 @@
       <workItem from="1620228964222" duration="7650000" />
       <workItem from="1620288734059" duration="10473000" />
       <workItem from="1620577024725" duration="8819000" />
-      <workItem from="1620630518901" duration="10363000" />
+      <workItem from="1620630518901" duration="10458000" />
+      <workItem from="1620666764826" duration="7445000" />
+      <workItem from="1620704241690" duration="8336000" />
+      <workItem from="1620714644332" duration="552000" />
+      <workItem from="1620744172798" duration="15647000" />
+      <workItem from="1620789839272" duration="11992000" />
+      <workItem from="1620815207263" duration="14947000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>
@@ -204,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620590810776</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="5 неделя. Еще раз перенастроены коэффициенты для движения, начата работа над предметами">
+      <created>1620644273990</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620644273991</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +292,7 @@
     <MESSAGE value="save 12.04.21 1:14" />
     <MESSAGE value="4 неделя, убрал баг с мерцанием персонажа, починил управление, начал прописывать класс Map (метод пересчета отображаемого участка карты)" />
     <MESSAGE value="5 неделя. Окончательно доделано управление, настроены коэфициенты скорости при хождении прямо/по диагонали, создан отдельные таймеры для отрисовки и для модели" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 неделя. Окончательно доделано управление, настроены коэфициенты скорости при хождении прямо/по диагонали, создан отдельные таймеры для отрисовки и для модели" />
+    <MESSAGE value="5 неделя. Еще раз перенастроены коэффициенты для движения, начата работа над предметами" />
+    <option name="LAST_COMMIT_MESSAGE" value="5 неделя. Еще раз перенастроены коэффициенты для движения, начата работа над предметами" />
   </component>
 </project>
