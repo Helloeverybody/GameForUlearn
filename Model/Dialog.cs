@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Model
 {
@@ -18,15 +22,34 @@ namespace Model
         public void DrawDialog(Graphics g, Size windowSize)
         {
             var font = new Font("SlimamifMedium", 40, FontStyle.Bold, GraphicsUnit.Pixel);
-            var pen = new Pen(Color.Black);
             g.FillRectangle(Brushes.Black, windowSize.Width / 10, windowSize.Height * 2 / 3,
                 windowSize.Width * 4 / 5, windowSize.Height / 5);
             // декоративные прямоугольники
             //g.DrawRectangle(Pens.Tan, , ,windowSize.Width - 50, windowSize.Height / 6);
             //g.DrawRectangle(Pens.Black, , , windowSize.Width - 60, windowSize.Height / 6);
             //var splittedText 
-            g.DrawString(Text, font, Brushes.White, new PointF(windowSize.Width / 9, 
-                windowSize.Height * 2 / 3), StringFormat.GenericTypographic); 
+            
+            // можно по таймеру отсчитывать время, через которое будет отрисовываться один символ
+            // делать это придется, очевидно, через многопоточку
+
+            var timer = new Timer();
+            timer.Interval = 100;
+            timer.Start();
+            var letters = Text.ToArray();
+            float fontWidth = 0;
+            foreach (var letter in letters)
+            {
+                fontWidth += font.Size / 2;
+                g.DrawString(letter.ToString(), font, Brushes.White, new PointF(windowSize.Width / 9 + fontWidth, 
+                    windowSize.Height * 2 / 3), StringFormat.GenericTypographic); 
+            }
+        }
+
+        public IEnumerable<string> GetLetter()
+        {
+            var letters = Text.ToArray();
+            foreach (var letter in letters)
+                yield return letter.ToString();
         }
     }
 }

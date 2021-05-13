@@ -11,7 +11,6 @@ C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\bin\Debug\My_
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.exe
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\bin\Debug\My_game_for_Ulearn.pdb
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csprojAssemblyReference.cache
-C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.Form1.resources
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.Properties.Resources.resources
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.GenerateResource.cache
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CoreCompileInputs.cache
@@ -33,3 +32,4 @@ D:\Games\Projects\GameForUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\bin\Debug\Model.dll
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\bin\Debug\Model.pdb
 C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My game for Ulearn.csproj.CopyComplete
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\My game for Ulearn\obj\Debug\My_game_for_Ulearn.MainForm.resources

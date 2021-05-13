@@ -1,0 +1,6 @@
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\View\bin\Debug\View.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\View\bin\Debug\View.pdb
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\View\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\View\obj\Debug\View.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\View\obj\Debug\View.pdb

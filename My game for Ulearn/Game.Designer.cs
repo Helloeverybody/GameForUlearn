@@ -1,6 +1,6 @@
 ﻿namespace My_game_for_Ulearn
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 450);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
         }
 

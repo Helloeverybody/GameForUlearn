@@ -45,6 +45,7 @@
         <Compile Include="GameState.cs" />
         <Compile Include="GameStates\Game.cs" />
         <Compile Include="GameStates\MainMenue.cs" />
+        <Compile Include="Interfaces\MainForm.cs" />
         <Compile Include="Inventory.cs" />
         <Compile Include="InventoryItem.cs" />
         <Compile Include="OnMapItem.cs" />

@@ -5,6 +5,8 @@
         MainMenu,
         Game,
         GameMenu,
-        Settings
+        Dialog,
+        Inventory,
+        SettingsMenu
     }
 }
