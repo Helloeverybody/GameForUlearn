@@ -24,8 +24,9 @@ namespace Model
             var font = new Font("SlimamifMedium", 40, FontStyle.Bold, GraphicsUnit.Pixel);
             g.FillRectangle(Brushes.Black, windowSize.Width / 10, windowSize.Height * 2 / 3,
                 windowSize.Width * 4 / 5, windowSize.Height / 5);
-            // декоративные прямоугольники
-            //g.DrawRectangle(Pens.Tan, , ,windowSize.Width - 50, windowSize.Height / 6);
+            // декоративные прямоугольники (нгдо бы заменить спрайтом)
+            //g.FillRectangle(Brushes.Tan, windowSize.Width * 31 / 300, windowSize.Height * 2 / 3 + 10,
+            //    windowSize.Width * 237 / 300, windowSize.Height / 5 - 20);
             //g.DrawRectangle(Pens.Black, , , windowSize.Width - 60, windowSize.Height / 6);
             //var splittedText 
             

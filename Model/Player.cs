@@ -17,6 +17,11 @@ namespace Model
         
         public Inventory Inventory { get; set; }
 
+        // public List<OnMapItem> NearbyItems
+        // {
+        //     get => items.Where(item => item.IsNearby(X, Y)).ToList();
+        // }
+
         public bool WalkForward = false;
         public bool WalkBack = false;
         public bool WalkRight = false;
@@ -60,8 +65,8 @@ namespace Model
             X = maxSpeed * move.X;
             Y = maxSpeed * move.Y;
         }
-
-        public List<OnMapItem> CheckForItems(IEnumerable<OnMapItem> items)
+        
+        public List<OnMapItem> NearbyItems(IEnumerable<OnMapItem> items)
         {
             return items.Where(item => item.IsNearby(X, Y)).ToList();
         }

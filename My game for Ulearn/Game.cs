@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using Model;
 
@@ -40,7 +41,7 @@ namespace My_game_for_Ulearn
             UpdateStyles();
             
             itemsOnMap = new List<OnMapItem>();
-            itemsOnMap.Add(new OnMapItem("testItem", Size.Width / 2, Size.Height / 2));
+            itemsOnMap.Add(new OnMapItem("testItem", Size.Width / 2, Size.Height / 2, 10));
         }
         
         private void OnTickMove(object sender, EventArgs e)
@@ -89,12 +90,23 @@ namespace My_game_for_Ulearn
             
             if (e.KeyCode == Keys.E)
             {
-                if (false)
+                if (GameState != GameState.Dialog /*&& Player.NearbyItems(itemsOnMap).Count(x => x.IsDialogable) != 0*/)
                     GameState = GameState.Dialog;
                 else
-                    GameState = GameState.Inventory;
+                    GameState = GameState.Game;
+                
                 var dialog = new Dialog("Это тестовоый диалог.");
                 //DrawDialog(dialog, graphics, Size);
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            { 
+                //GameState = GameState.GameMenu;
+            }
+
+            if (e.KeyCode == Keys.Q)
+            {
+                
             }
         }
         
@@ -107,8 +119,16 @@ namespace My_game_for_Ulearn
         {
             if (key == Keys.A || key == Keys.Left) Player.WalkRight = value;
             if (key == Keys.D || key == Keys.Right) Player.WalkLeft = value;
-            if (key == Keys.W || key == Keys.Up)Player.WalkBack = value;
+            if (key == Keys.W || key == Keys.Up) Player.WalkBack = value;
             if (key == Keys.S || key == Keys.Down) Player.WalkForward = value;
+
+            if (GameState != GameState.Game)
+            {
+                Player.WalkRight = false;
+                Player.WalkLeft = false;
+                Player.WalkBack = false;
+                Player.WalkForward = false;
+            }
         }
     }
 }

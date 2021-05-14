@@ -1,10 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Model
 {
     public class Inventory
     {
         private List<InventoryItem> inventory = new List<InventoryItem>();
+
+        public int InventoryWeight
+        {
+            get
+            {
+                var weight = 0;
+                inventory.Select(x => weight += x.Weight);
+                return weight;
+            }
+        }
 
         public void Add(InventoryItem inventoryItem)
         {

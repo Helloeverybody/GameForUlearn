@@ -27,32 +27,35 @@ namespace My_game_for_Ulearn
             foreach (var item in form.itemsOnMap)
                 g.DrawImage(item.ItemSprite, rect, 0, 0, form.Size.Width, form.Size.Height, GraphicsUnit.Point);
             
-            var nearbyItems = form.Player.CheckForItems(form.itemsOnMap);
+            var nearbyItems = form.Player.NearbyItems(form.itemsOnMap);
             foreach (var item in nearbyItems)
                 g.DrawImage(form.Player.playerSprite, rect, 0, 0, form.Size.Width, form.Size.Height, GraphicsUnit.Point);
-            
-            var a = new Dialog("Это тестовоый диалог.");
-            a.DrawDialog(g, form.Size);
         }
         
         public static void DrawGameMenu(object sender, PaintEventArgs e)
         {
+            var form = (MainForm) sender;
             var g = e.Graphics;
-            
         }
         
         public static void DrawDialog(object sender, PaintEventArgs e)
         {
+            var form = (MainForm) sender;
             var g = e.Graphics;
+            DrawGame(sender, e);
+            var a = new Dialog("Это тестовоый диалог.");
+            a.DrawDialog(g, form.Size);
         }
         
         public static void DrawInventory(object sender, PaintEventArgs e)
         {
+            var form = (MainForm) sender;
             var g = e.Graphics;
         }
         
         public static void DrawSettingsMenu(object sender, PaintEventArgs e)
         {
+            var form = (MainForm) sender;
             var g = e.Graphics;
         }
     }
