@@ -43,7 +43,7 @@ namespace My_game_for_Ulearn
             var form = (MainForm) sender;
             var g = e.Graphics;
             DrawGame(sender, e);
-            var a = new Dialog("Это тестовоый диалог. Это тестовоый диалог. Это тестовоый диалог. Это тестовоый диалог.");
+            var a = new Model.Dialog("Это тестовоый диалог. Это тестовоый диалог. Это тестовоый диалог. Это тестовоый диалог.");
             a.DrawDialog(g, form.Size);
         }
         

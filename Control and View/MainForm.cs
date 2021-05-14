@@ -11,7 +11,6 @@ namespace My_game_for_Ulearn
     {
         public Map Map { get; set; }
         public Player Player { get; set; }
-        public Timer MoveTimer { get; }
         public Timer Timer { get; }
         public List<OnMapItem> ItemsOnMap { get; set; }
         public GameState GameState { get; set; }
@@ -91,7 +90,7 @@ namespace My_game_for_Ulearn
                 else
                     GameState = GameState.Game;
                 
-                var dialog = new Dialog("Это тестовоый диалог.");
+                var dialog = new Model.Dialog("Это тестовоый диалог.");
                 //DrawDialog(dialog, graphics, Size);
             }
 

@@ -33,11 +33,11 @@
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(284, 272);
+            this.ClientSize = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Size;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form1";
+            this.Text = "Game";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
         }

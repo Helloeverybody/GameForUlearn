@@ -6,12 +6,11 @@ namespace Model
 {
     public class Map
     {
-        public Bitmap mapSprite;
         public PointF Anchor;
-        
-        //public double speed;
-        private const float MaxSpeed = 2.4f;
+        public Bitmap mapSprite;
         public Vector Move = Vector.Zero;
+        
+        float PlayerSpeed = 2.4f;
         
         public Map(Size size)
         {
@@ -44,8 +43,8 @@ namespace Model
             else if (MoveLeft)
                 Move += new Vector(-1, 0);
 
-            Anchor.X = MaxSpeed * Move.X;
-            Anchor.Y = MaxSpeed * Move.Y;
+            Anchor.X = PlayerSpeed * Move.X;
+            Anchor.Y = PlayerSpeed * Move.Y;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My game for Ulearn", "My game for Ulearn\My game for Ulearn.csproj", "{F52D53D2-C800-48A1-A72B-9BA7E50AE30A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control and View", "Control and View\Control and View.csproj", "{F52D53D2-C800-48A1-A72B-9BA7E50AE30A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{3D4EFC50-2B1F-4774-B8BF-629FCB51595D}"
 EndProject
