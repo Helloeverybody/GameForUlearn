@@ -29,5 +29,10 @@ namespace Model
         {
             return Math.Sqrt((x - X * 2) * (x - X * 2) + (y - Y * 2) * (y - Y * 2)) <= 70;
         }
+
+        public void ToInventory()
+        {
+            
+        }
     }
 }

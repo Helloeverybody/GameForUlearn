@@ -11,25 +11,26 @@ namespace My_game_for_Ulearn
     {
         public Map Map { get; set; }
         public Player Player { get; set; }
-        public Timer moveTimer { get; }
-        public Timer timer { get; }
-        public List<OnMapItem> itemsOnMap { get; set; }
+        public Timer MoveTimer { get; }
+        public Timer Timer { get; }
+        public List<OnMapItem> ItemsOnMap { get; set; }
         public GameState GameState { get; set; }
+        
+        public int FormWidth;
+        public int FormHeight;
         
         public MainForm()
         {
             InitializeComponent();
             GameState = GameState.Game;
             Player = new Player(Size.Width / 2, Size.Height / 2);
-            Map = new Map();
-            
-            moveTimer = new Timer { Interval = 30 };
-            moveTimer.Start();
-            moveTimer.Tick += OnTickMove;
-            
-            timer = new Timer { Interval = 5 };
-            timer.Start();
-            timer.Tick += OnTick;
+            Map = new Map(Size);
+            FormWidth = Size.Width;
+            FormHeight = Size.Height;
+
+            Timer = new Timer { Interval = 1 };
+            Timer.Start();
+            Timer.Tick += OnTick;
             
             Paint += OnPaintUpdate;
             KeyDown += Form1_KeyDown;
@@ -40,18 +41,13 @@ namespace My_game_for_Ulearn
                      ControlStyles.UserPaint, true);
             UpdateStyles();
             
-            itemsOnMap = new List<OnMapItem>();
-            itemsOnMap.Add(new OnMapItem("testItem", Size.Width / 2, Size.Height / 2, 10));
-        }
-        
-        private void OnTickMove(object sender, EventArgs e)
-        {
-            Player.Translate();
-            Map.Anchor = new Point(Player.X - Size.Width / 2, Player.Y - Size.Height / 2);
+            ItemsOnMap = new List<OnMapItem>();
+            ItemsOnMap.Add(new OnMapItem("testItem", Size.Width / 2, Size.Height / 2, 10));
         }
         
         private void OnTick(object sender, EventArgs e)
         {
+            Map.Translate();
             //Invalidate(); не понятно, чем отличается от Refresh
             Refresh(); 
         }
@@ -104,9 +100,9 @@ namespace My_game_for_Ulearn
                 //GameState = GameState.GameMenu;
             }
 
-            if (e.KeyCode == Keys.Q)
+            if (e.KeyCode == Keys.F)
             {
-                
+                //GameState = GameState.Inventory;
             }
         }
         
@@ -117,17 +113,17 @@ namespace My_game_for_Ulearn
         
         private void HandleKey(Keys key, bool value)
         {
-            if (key == Keys.A || key == Keys.Left) Player.WalkRight = value;
-            if (key == Keys.D || key == Keys.Right) Player.WalkLeft = value;
-            if (key == Keys.W || key == Keys.Up) Player.WalkBack = value;
-            if (key == Keys.S || key == Keys.Down) Player.WalkForward = value;
+            if (key == Keys.A || key == Keys.Left) Map.MoveLeft = value;
+            if (key == Keys.D || key == Keys.Right) Map.MoveRight = value;
+            if (key == Keys.W || key == Keys.Up) Map.MoveForward = value;
+            if (key == Keys.S || key == Keys.Down) Map.MoveBack = value;
 
             if (GameState != GameState.Game)
             {
-                Player.WalkRight = false;
-                Player.WalkLeft = false;
-                Player.WalkBack = false;
-                Player.WalkForward = false;
+                Map.MoveLeft = false;
+                Map.MoveRight = false;
+                Map.MoveForward = false;
+                Map.MoveBack = false;
             }
         }
     }

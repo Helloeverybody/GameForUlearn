@@ -4,8 +4,8 @@ namespace Model
 {
     public class Vector
     {
-        public int X;
-        public int Y;
+        public float X;
+        public float Y;
 
         public double Length => Math.Sqrt(X * X + Y * Y);
         public double Angle => Math.Acos(X/Length);
@@ -16,10 +16,10 @@ namespace Model
             Y = y;
         }
 
-        public Vector(double length, double angle)
+        public Vector(float x, float y)
         {
-            X = (int)Math.Ceiling(length * Math.Cos(angle));
-            Y = (int)Math.Ceiling(length * Math.Sin(angle));
+            X = x;
+            Y = y;
         }
         
         public static Vector operator +(Vector v1, Vector v2) => new Vector(v1.X + v2.X, v1.Y + v2.Y);

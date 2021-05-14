@@ -22,8 +22,9 @@ namespace Model
             inventory.Add(inventoryItem);
         }
 
-        public void Delete(InventoryItem inventoryItem)
+        public void Drop(InventoryItem inventoryItem)
         {
+            inventoryItem.ToOnMap();
             inventory.Remove(inventoryItem);
         }
         

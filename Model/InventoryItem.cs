@@ -6,6 +6,11 @@ namespace Model
     {
         public Image itemSprite;
         public int Weight;
-        
+        public int CellNumber;
+
+        public void ToOnMap()
+        {
+            
+        }
     }
 }

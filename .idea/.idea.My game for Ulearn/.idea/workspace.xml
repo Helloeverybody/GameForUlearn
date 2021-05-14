@@ -11,25 +11,35 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="">
+    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="6 недлеля. Сделал перенос строки в диалогах. Перенес метод Translate из Player в Map. Теперь игрок просто отрисовывается в центре, а карта двигается под ним.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Dialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/GameStates/Game.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/GameStates/MainMenue.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/InventoryItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/OnMapItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/OnMapItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Scales/madnessScale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Scales/madnessScale.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Vector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Vector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/Drawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Drawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/bin/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My game for Ulearn.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.MainForm.resources" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.MainForm.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
     </list>
@@ -92,14 +102,10 @@
       <option value="$PROJECT_DIR$/Model/Class1.cs" />
       <option value="$PROJECT_DIR$/Model/GameObjectState.cs" />
       <option value="$PROJECT_DIR$/Model/Monster.cs" />
-      <option value="$PROJECT_DIR$/Model/Scales/madnessScale.cs" />
       <option value="$PROJECT_DIR$/Model/Scales/Scale.cs" />
       <option value="$PROJECT_DIR$/Model/GameStates/Game.cs" />
       <option value="$PROJECT_DIR$/Model/GameStates/MainMenue.cs" />
-      <option value="$PROJECT_DIR$/Model/Vector.cs" />
-      <option value="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" />
       <option value="$PROJECT_DIR$/Model/Item.cs" />
-      <option value="$PROJECT_DIR$/Model/Map.cs" />
       <option value="$USER_HOME$/Documents/GitHub/Immunity-Game/Assets/Scripts/PathData.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/View/Drawer.cs" />
       <option value="$PROJECT_DIR$/Model/GameState.cs" />
@@ -108,13 +114,17 @@
       <option value="$PROJECT_DIR$/Model/Interfaces/MainForm.cs" />
       <option value="$PROJECT_DIR$/View/Drawer.cs" />
       <option value="$PROJECT_DIR$/Model/MapSprite.resx" />
-      <option value="$PROJECT_DIR$/My game for Ulearn/Drawer.cs" />
-      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
       <option value="$PROJECT_DIR$/Model/Player.cs" />
       <option value="$PROJECT_DIR$/Model/InventoryItem.cs" />
       <option value="$PROJECT_DIR$/Model/Inventory.cs" />
       <option value="$PROJECT_DIR$/Model/OnMapItem.cs" />
+      <option value="$PROJECT_DIR$/Model/Scales/madnessScale.cs" />
+      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Drawer.cs" />
+      <option value="$PROJECT_DIR$/Model/Vector.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
+      <option value="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" />
+      <option value="$PROJECT_DIR$/Model/Map.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -195,7 +205,8 @@
       <workItem from="1620815207263" duration="15019000" />
       <workItem from="1620919764138" duration="12846000" />
       <workItem from="1620937006617" duration="2010000" />
-      <workItem from="1620973007789" duration="2149000" />
+      <workItem from="1620973007789" duration="20976000" />
+      <workItem from="1621004657798" duration="1902000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>
@@ -326,6 +337,7 @@
     <MESSAGE value="5 неделя. Еще раз перенастроены коэффициенты для движения, начата работа над предметами" />
     <MESSAGE value="5 неделя .Добавлены диалоги (плохо добавлены, но все же), исправлен баг с реагированием предметов на персонажа." />
     <MESSAGE value="6 неделя. Начал реализовывать машину состояний игры. Отделил отрисовку от класса MainForm и улучшил ее. Начал разрабатывать красивую отрисовку диалогов." />
-    <option name="LAST_COMMIT_MESSAGE" value="6 неделя. Начал реализовывать машину состояний игры. Отделил отрисовку от класса MainForm и улучшил ее. Начал разрабатывать красивую отрисовку диалогов." />
+    <MESSAGE value="Сделал перенос строки в диалогах. перенес" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал перенос строки в диалогах. перенес" />
   </component>
 </project>

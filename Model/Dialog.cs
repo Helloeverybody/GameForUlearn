@@ -21,9 +21,10 @@ namespace Model
 
         public void DrawDialog(Graphics g, Size windowSize)
         {
-            var font = new Font("SlimamifMedium", 40, FontStyle.Bold, GraphicsUnit.Pixel);
             g.FillRectangle(Brushes.Black, windowSize.Width / 10, windowSize.Height * 2 / 3,
                 windowSize.Width * 4 / 5, windowSize.Height / 5);
+            //g.DrawImage();
+            
             // декоративные прямоугольники (нгдо бы заменить спрайтом)
             //g.FillRectangle(Brushes.Tan, windowSize.Width * 31 / 300, windowSize.Height * 2 / 3 + 10,
             //    windowSize.Width * 237 / 300, windowSize.Height / 5 - 20);
@@ -36,13 +37,22 @@ namespace Model
             var timer = new Timer();
             timer.Interval = 100;
             timer.Start();
+            
             var letters = Text.ToArray();
-            float fontWidth = 0;
+            var font = new Font("SlimamifMedium", 20, FontStyle.Bold, GraphicsUnit.Pixel);
+            float lineWidth = 0;
+            float lineHeight = 0;
             foreach (var letter in letters)
             {
-                fontWidth += font.Size / 2;
-                g.DrawString(letter.ToString(), font, Brushes.White, new PointF(windowSize.Width / 9 + fontWidth, 
-                    windowSize.Height * 2 / 3), StringFormat.GenericTypographic); 
+                lineWidth += font.Size / 2;
+                if (lineWidth >= windowSize.Width * 7 / 10)
+                {
+                    lineHeight += font.Size;
+                    lineWidth = font.Size / 2;
+                }
+                    
+                g.DrawString(letter.ToString(), font, Brushes.White, new PointF(windowSize.Width / 9 + lineWidth, 
+                    windowSize.Height * 2 / 3 + lineHeight), StringFormat.GenericTypographic);
             }
         }
 

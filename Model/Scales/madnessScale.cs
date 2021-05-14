@@ -1,6 +1,6 @@
-﻿namespace Model
+﻿namespace Model.Scales
 {
-    public class madnessScale : Scale
+    public class MadnessScale : Scale
     {
         
     }
