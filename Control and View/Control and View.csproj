@@ -49,39 +49,20 @@
         <Compile Include="Dialog.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="Dialog.Designer.cs">
-          <DependentUpon>Dialog.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Drawer.cs" />
         <Compile Include="Game.cs">
           <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="Game.Designer.cs">
-          <DependentUpon>Game.cs</DependentUpon>
         </Compile>
         <Compile Include="GameMenu.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="GameMenu.Designer.cs">
-          <DependentUpon>GameMenu.cs</DependentUpon>
-        </Compile>
         <Compile Include="Inventory.cs">
           <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="Inventory.Designer.cs">
-          <DependentUpon>Inventory.cs</DependentUpon>
         </Compile>
         <Compile Include="MainForm.cs">
             <SubType>Form</SubType>
         </Compile>
-        <Compile Include="MainForm.Designer.cs">
-            <DependentUpon>MainForm.cs</DependentUpon>
-        </Compile>
         <Compile Include="MainMenu.cs">
           <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="MainMenu.Designer.cs">
-          <DependentUpon>MainMenu.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,12 +1,13 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace My_game_for_Ulearn
 {
-    public partial class Inventory : UserControl
+    public class Inventory : UserControl
     {
-        public Inventory()
+        public Inventory(MainForm form)
         {
-            InitializeComponent();
+            ClientSize = Screen.PrimaryScreen.Bounds.Size;
         }
     }
 }

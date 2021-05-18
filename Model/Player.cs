@@ -22,6 +22,7 @@ namespace Model
         {
             X = x;
             Y = y;
+            
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
             playerSprite = Image.FromFile(path);
         }
