@@ -12,34 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csproj.GenerateResource.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Control and View.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Control and View.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Dialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Drawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Game.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/GameMenu.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/GameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/GameMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/MainForm.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/MainForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Properties/Settings.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Map.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
@@ -63,15 +48,21 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Model/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/90/86ac2239/NativeWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/06/7efdb8d0/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/e1/5029cef2/Form.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/65/aa42de5b/Control.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/79/a177b511/Application.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/8b/3e92e6d1/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/33/aada25f9/ScrollableControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/78/4f707c6a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/f5/1919eb60/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/View/Drawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/f1/3048fe79/ContainerControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Control and View/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/e5/1dcf6db2/Graphics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/GitHub/Immunity-Game/Assets/Scripts/PathData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/6a/16e0d01a/UserControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Control and View/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -110,7 +101,6 @@
       <option value="$PROJECT_DIR$/Model/Dialog.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Drawer.cs" />
       <option value="$PROJECT_DIR$/Model/Vector.cs" />
-      <option value="$PROJECT_DIR$/Model/Map.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Game.Designer.cs" />
       <option value="$PROJECT_DIR$/Control and View/GameMenu.Designer.cs" />
@@ -122,10 +112,11 @@
       <option value="$PROJECT_DIR$/Control and View/Drawer.cs" />
       <option value="$PROJECT_DIR$/Control and View/MainForm.Designer.cs" />
       <option value="$PROJECT_DIR$/Control and View/GameMenu.cs" />
-      <option value="$PROJECT_DIR$/Control and View/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Control and View/Inventory.cs" />
-      <option value="$PROJECT_DIR$/Control and View/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Model/Map.cs" />
       <option value="$PROJECT_DIR$/Control and View/Game.cs" />
+      <option value="$PROJECT_DIR$/Control and View/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Control and View/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Control and View/MainForm.cs" />
     </changedPaths>
   </component>
@@ -213,7 +204,8 @@
       <workItem from="1621280636678" duration="645000" />
       <workItem from="1621315950530" duration="2464000" />
       <workItem from="1621338968467" duration="2877000" />
-      <workItem from="1621354542715" duration="9317000" />
+      <workItem from="1621354542715" duration="9749000" />
+      <workItem from="1621396577777" duration="11685000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>
@@ -292,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621022994764</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="6 неделя. Проект переведен на систему из User Controls. Функциональность до конца не восстановлена.">
+      <created>1621366114221</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1621366114221</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +367,7 @@
     <MESSAGE value="Сделал перенос строки в диалогах. перенес" />
     <MESSAGE value="6 неделя. Решил проблему с телепортацией персонажа при масштабировании (исключил масштабирование). Перенес метод Translate() из Palyer  в Map, теперь игрок отрисовывается посередине экрана, а карта проезжает под ним. Перенастроил управление, теперь нужен всего один таймер, отрисовка более плавная. Настроил переменные, связанные с перемещением игрока, теперь можно более детально регулировать скорость." />
     <MESSAGE value="6 неделя. Добавлены Usercontrols" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 неделя. Добавлены Usercontrols" />
+    <MESSAGE value="6 неделя. Проект переведен на систему из User Controls. Функциональность до конца не восстановлена." />
+    <option name="LAST_COMMIT_MESSAGE" value="6 неделя. Проект переведен на систему из User Controls. Функциональность до конца не восстановлена." />
   </component>
 </project>

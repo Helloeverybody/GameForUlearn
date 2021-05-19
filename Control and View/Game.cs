@@ -19,6 +19,8 @@ namespace My_game_for_Ulearn
         
         public Game(MainForm form)
         {
+            ClientSize = Screen.PrimaryScreen.Bounds.Size;
+            Name = "Game";
             mainForm = form;
             
             Player = new Player(Size.Width / 2, Size.Height / 2);
@@ -27,12 +29,6 @@ namespace My_game_for_Ulearn
             Timer = new Timer { Interval = 1 };
             Timer.Start();
             Timer.Tick += OnTick;
-            
-            KeyDown += Form1_KeyDown;
-            KeyUp += Form1_KeyUp;
-            
-            ClientSize = Screen.PrimaryScreen.Bounds.Size;
-            
             
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
                      ControlStyles.AllPaintingInWmPaint |
@@ -48,7 +44,8 @@ namespace My_game_for_Ulearn
             var g = e.Graphics;
             var size = new Size(Size.Width * 2, Size.Height * 2);
             var rect = new Rectangle(new Point(0, 0), size);
-            g.DrawImage(Map.mapSprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
+            
+            g.DrawImage(Map.MapSprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
             g.DrawImage(Player.playerSprite, Size.Width / 2 - 25, Size.Height / 2 - 25, 50,50);
             
             foreach (var item in ItemsOnMap)
@@ -65,7 +62,7 @@ namespace My_game_for_Ulearn
             Refresh(); 
         }
         
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        protected override void OnKeyDown(KeyEventArgs e)
         {
             HandleKey(e.KeyCode, true);
             
@@ -101,7 +98,7 @@ namespace My_game_for_Ulearn
             }
         }
         
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        protected override void OnKeyUp(KeyEventArgs e)
         {
             HandleKey(e.KeyCode, false);
         }
@@ -112,11 +109,6 @@ namespace My_game_for_Ulearn
             if (key == Keys.D || key == Keys.Right) Map.MoveRight = value;
             if (key == Keys.W || key == Keys.Up) Map.MoveForward = value;
             if (key == Keys.S || key == Keys.Down) Map.MoveBack = value;
-
-            Map.MoveLeft = false;
-            Map.MoveRight = false;
-            Map.MoveForward = false;
-            Map.MoveBack = false;
         }
     }
 }

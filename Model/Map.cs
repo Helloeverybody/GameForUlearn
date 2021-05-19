@@ -7,7 +7,7 @@ namespace Model
     public class Map
     {
         public PointF Anchor;
-        public Bitmap mapSprite;
+        public Bitmap MapSprite;
         public Vector Move = Vector.Zero;
         
         float PlayerSpeed = 2.4f;
@@ -15,7 +15,7 @@ namespace Model
         public Map(Size size)
         {
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Map.png";
-            mapSprite = (Bitmap)Image.FromFile(path);
+            MapSprite = (Bitmap)Image.FromFile(path);
             Anchor = new PointF(size.Width, size.Height);
         }
         
