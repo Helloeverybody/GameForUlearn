@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using Model;
 
@@ -14,21 +15,26 @@ namespace My_game_for_Ulearn
         
         public Map Map { get; set; }
         public Player Player { get; set; }
-        public Timer Timer { get; }
+        public Timer PaintTimer { get; }
+        public Timer WalkTimer { get; }
         public List<OnMapItem> ItemsOnMap { get; set; }
         
         public Game(MainForm form)
         {
             ClientSize = Screen.PrimaryScreen.Bounds.Size;
-            Name = "Game";
             mainForm = form;
             
             Player = new Player(Size.Width / 2, Size.Height / 2);
             Map = new Map(Size);
             
-            Timer = new Timer { Interval = 1 };
-            Timer.Start();
-            Timer.Tick += OnTick;
+            // TODO оно лагает все равно, нужно пофиксить
+            WalkTimer = new Timer { Interval = 1 };
+            WalkTimer.Start();
+            WalkTimer.Tick += OnWalkTick;
+            
+            PaintTimer = new Timer { Interval = 10 };
+            PaintTimer.Start();
+            PaintTimer.Tick += OnTick;
             
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
                      ControlStyles.AllPaintingInWmPaint |
@@ -58,8 +64,12 @@ namespace My_game_for_Ulearn
         
         private void OnTick(object sender, EventArgs e)
         {
-            Map.Translate();
             Refresh(); 
+        }
+        
+        private void OnWalkTick(object sender, EventArgs e)
+        {
+            Map.Translate();
         }
         
         protected override void OnKeyDown(KeyEventArgs e)
@@ -68,33 +78,29 @@ namespace My_game_for_Ulearn
             
             if (e.KeyCode == Keys.E)
             {
-                if (mainForm.Dialog.Enabled != true /*&& Player.NearbyItems(itemsOnMap).Count(x => x.IsDialogable) != 0*/)
+                if (Player.NearbyItems(ItemsOnMap).Count(x => x.IsDialogable) != 0)
                 {
-                    mainForm.Game.Enabled = false;
-                    mainForm.Dialog.Enabled = true;
-                    mainForm.Dialog.Show();
-                } 
-                else
-                {
-                    mainForm.Dialog.Enabled = false;
-                    mainForm.Game.Enabled = true;
-                    mainForm.Game.Show();
-                }
                     
+                } 
+                
+                if (Player.NearbyItems(ItemsOnMap).Count(x => x.IsPickable) != 0)
+                {
+                    
+                } 
+
+                mainForm.StartDialog();
+
                 var dialog = new Model.Dialog("Это тестовоый диалог.");
-                
-                mainForm.Dialog.Enabled = true;
-                
             }
 
             if (e.KeyCode == Keys.Escape)
-            { 
-                //GameMenu;
+            {
+                mainForm.PauseGame();
             }
 
             if (e.KeyCode == Keys.F)
             {
-                //Inventory;
+                mainForm.OpenInventory();
             }
         }
         

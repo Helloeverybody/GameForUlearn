@@ -10,7 +10,7 @@ namespace Model
         public Bitmap MapSprite;
         public Vector Move = Vector.Zero;
         
-        float PlayerSpeed = 2.4f;
+        float PlayerSpeed = 3f;
         
         public Map(Size size)
         {

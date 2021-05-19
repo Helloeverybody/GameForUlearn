@@ -18,7 +18,7 @@ namespace Model
         public OnMapItem(string name, int x, int y, int weight)
         {
             Name = name;
-            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Item.png";
+            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\woodLog.png";
             ItemSprite = Image.FromFile(path);
             X = x;
             Y = y;

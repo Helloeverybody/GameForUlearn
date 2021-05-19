@@ -18,43 +18,32 @@ namespace My_game_for_Ulearn
         
         private void InitializeComponent()
         {
+            ClientSize = Screen.PrimaryScreen.Bounds.Size;
             var playButton = new Button
             {
-                Text = @"Play",
-                Location = new Point(mainForm.Size.Width / 10, mainForm.Size.Height * 7 / 10),
-                Size = new Size(mainForm.Size.Width / 5, mainForm.Size.Height / 10)
+                Text = @"Играть",
+                Location = new Point(Size.Width / 3, Size.Height * 7 / 16),
+                Size = new Size(Size.Width / 3, Size.Height / 8)
             };
 
             playButton.Click += OnPlayButtonClick;
-            ClientSize = Screen.PrimaryScreen.Bounds.Size;
-            components = new Container();
-            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(playButton);
         }
 
         private void OnPlayButtonClick(object sender, EventArgs e)
         {
-            mainForm.MainMenu.Enabled = false;
-            mainForm.MainMenu.Hide();
-            mainForm.Game.Enabled = true;
-            mainForm.Game.Show();
+            mainForm.StartGame();
         }
         
         protected override void OnPaint(PaintEventArgs e)
         {
             var g = e.Graphics;
             g.Clear(Color.DarkSlateGray);
-            g.FillRectangle(Brushes.Black, Size.Width / 10, Size.Height * 2 / 3,
-                Size.Width * 4 / 5, Size.Height / 5);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-
-            base.Dispose(disposing);
+            g.FillRectangle(Brushes.Black, Size.Width / 3, Size.Height / 10,
+                Size.Width / 3, Size.Height / 5);
+            var font = new Font("SlimamifMedium", 60, FontStyle.Bold, GraphicsUnit.Pixel);
+            g.DrawString("МОЯ ИГРА", font, Brushes.White, new PointF(Size.Width * 4 / 10, 
+                Size.Height / 10 + 20), StringFormat.GenericTypographic);
         }
     }
 }

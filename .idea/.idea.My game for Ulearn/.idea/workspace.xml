@@ -12,11 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Ground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/PlayerAnimations.ase" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/woodLog.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Dialog.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/GameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/GameMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/MainForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Item.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Map.png" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Player.png" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Player.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
@@ -24,9 +32,16 @@
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Dialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/GameState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Interfaces/MainForm.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/OnMapItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/OnMapItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
     </list>
@@ -96,9 +111,7 @@
       <option value="$PROJECT_DIR$/Model/MapSprite.resx" />
       <option value="$PROJECT_DIR$/Model/InventoryItem.cs" />
       <option value="$PROJECT_DIR$/Model/Inventory.cs" />
-      <option value="$PROJECT_DIR$/Model/OnMapItem.cs" />
       <option value="$PROJECT_DIR$/Model/Scales/madnessScale.cs" />
-      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Drawer.cs" />
       <option value="$PROJECT_DIR$/Model/Vector.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Game.cs" />
@@ -111,13 +124,15 @@
       <option value="$PROJECT_DIR$/Model/Player.cs" />
       <option value="$PROJECT_DIR$/Control and View/Drawer.cs" />
       <option value="$PROJECT_DIR$/Control and View/MainForm.Designer.cs" />
-      <option value="$PROJECT_DIR$/Control and View/GameMenu.cs" />
-      <option value="$PROJECT_DIR$/Control and View/Inventory.cs" />
+      <option value="$PROJECT_DIR$/Model/OnMapItem.cs" />
       <option value="$PROJECT_DIR$/Model/Map.cs" />
-      <option value="$PROJECT_DIR$/Control and View/Game.cs" />
-      <option value="$PROJECT_DIR$/Control and View/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Control and View/Inventory.cs" />
       <option value="$PROJECT_DIR$/Control and View/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Control and View/MainForm.cs" />
+      <option value="$PROJECT_DIR$/Control and View/GameMenu.cs" />
+      <option value="$PROJECT_DIR$/Control and View/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Control and View/Game.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -205,7 +220,7 @@
       <workItem from="1621315950530" duration="2464000" />
       <workItem from="1621338968467" duration="2877000" />
       <workItem from="1621354542715" duration="9749000" />
-      <workItem from="1621396577777" duration="11685000" />
+      <workItem from="1621396577777" duration="32604000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>
@@ -291,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621366114221</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="6 неделя. Восстановлена функциональность после перехода на Usercontrols, проведен общий рефакторинг">
+      <created>1621423327945</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1621423327945</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +390,7 @@
     <MESSAGE value="6 неделя. Решил проблему с телепортацией персонажа при масштабировании (исключил масштабирование). Перенес метод Translate() из Palyer  в Map, теперь игрок отрисовывается посередине экрана, а карта проезжает под ним. Перенастроил управление, теперь нужен всего один таймер, отрисовка более плавная. Настроил переменные, связанные с перемещением игрока, теперь можно более детально регулировать скорость." />
     <MESSAGE value="6 неделя. Добавлены Usercontrols" />
     <MESSAGE value="6 неделя. Проект переведен на систему из User Controls. Функциональность до конца не восстановлена." />
-    <option name="LAST_COMMIT_MESSAGE" value="6 неделя. Проект переведен на систему из User Controls. Функциональность до конца не восстановлена." />
+    <MESSAGE value="6 неделя. Восстановлена функциональность после перехода на Usercontrols, проведен общий рефакторинг" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 неделя. Восстановлена функциональность после перехода на Usercontrols, проведен общий рефакторинг" />
   </component>
 </project>

@@ -42,8 +42,6 @@
     <ItemGroup>
         <Compile Include="Dialog.cs" />
         <Compile Include="GameObjectState.cs" />
-        <Compile Include="GameState.cs" />
-        <Compile Include="Interfaces\MainForm.cs" />
         <Compile Include="Inventory.cs" />
         <Compile Include="InventoryItem.cs" />
         <Compile Include="OnMapItem.cs" />
@@ -54,6 +52,9 @@
         <Compile Include="Scales\madnessScale.cs" />
         <Compile Include="Scales\Scale.cs" />
         <Compile Include="Vector.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Interfaces" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

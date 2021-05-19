@@ -5,7 +5,6 @@ namespace My_game_for_Ulearn
 {
     public class MainForm : Form
     {
-
         public MainMenu MainMenu;
         public Game Game;
         public Inventory Inventory;
@@ -14,15 +13,19 @@ namespace My_game_for_Ulearn
         
         public MainForm()
         {
-            MainMenu = new MainMenu(this);
-            MainMenu.Hide();
-            Game = new Game(this) {Enabled = true};
-            Game.Show();
-            Inventory = new Inventory(this);
+            MainMenu = new MainMenu(this) {Enabled = true};
+            MainMenu.Show();
+            
+            Game = new Game(this) {Enabled = false};
+            Game.Hide();
+            
+            Inventory = new Inventory(this) {Enabled = false};
             Inventory.Hide();
-            GameMenu = new GameMenu(this);
+            
+            GameMenu = new GameMenu(this) {Enabled = false};
             GameMenu.Hide();
-            Dialog = new Dialog(this);
+            
+            Dialog = new Dialog(this) {Enabled = false};
             Dialog.Hide();
             
             SuspendLayout();
@@ -36,6 +39,49 @@ namespace My_game_for_Ulearn
                      ControlStyles.AllPaintingInWmPaint |
                      ControlStyles.UserPaint, true);
             UpdateStyles();
+        }
+
+        public void StartGame()
+        {
+            FromControlToControl(MainMenu, Game);
+        }
+        
+        public void PauseGame()
+        {
+            FromControlToControl(Game, GameMenu);
+        }
+        
+        public void OpenInventory()
+        {
+            FromControlToControl(Game, Inventory);
+        }
+        
+        public void CloseInventory()
+        {
+            FromControlToControl(Inventory, Game);
+        }
+        
+        public void ContinueGame()
+        {
+            FromControlToControl(GameMenu, Game);
+        }
+        
+        public void StartDialog()
+        {
+            FromControlToControl(Game, Dialog);
+        }
+        public void EndDialog()
+        {
+            FromControlToControl(Dialog, Game);
+        }
+
+        public void FromControlToControl(UserControl fromThis, UserControl toThis)
+        {
+            fromThis.Enabled = false;
+            fromThis.Hide();
+            toThis.Enabled = true;
+            toThis.Show();
+            toThis.Focus();
         }
     }
 }
