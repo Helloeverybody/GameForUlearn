@@ -17,14 +17,17 @@ namespace Model
             }
         }
 
-        public void Add(InventoryItem inventoryItem)
+        public void Add(OnMapItem onMapItem)
         {
-            inventory.Add(inventoryItem);
+            inventory.Add(new InventoryItem
+            {
+                Weight = onMapItem.Weight
+            });
         }
 
         public void Drop(InventoryItem inventoryItem)
         {
-            inventoryItem.ToOnMap();
+            inventoryItem.OnMap();
             inventory.Remove(inventoryItem);
         }
         

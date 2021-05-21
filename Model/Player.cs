@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Windows.Forms;
 namespace Model
 {
     public class Player
@@ -26,18 +25,10 @@ namespace Model
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
             playerSprite = Image.FromFile(path);
         }
-        
-        public Player(Point point)
-        {
-            X = point.X;
-            Y = point.X;
-            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
-            playerSprite = Image.FromFile(path);
-        }
 
-        public List<OnMapItem> NearbyItems(IEnumerable<OnMapItem> items)
+        public List<OnMapItem> NearbyItems(IEnumerable<OnMapItem> items, PointF anchor)
         {
-            return items.Where(item => item.IsNearby(X, Y)).ToList();
+            return items.Where(item => item.IsNearby(anchor.X + X, anchor.Y + Y)).ToList();
         }
     }
 }

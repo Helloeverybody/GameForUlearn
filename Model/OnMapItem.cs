@@ -15,17 +15,22 @@ namespace Model
         public int X;
         public int Y;
 
-        public OnMapItem(string name, int x, int y, int weight)
+        public OnMapItem(string name, int x, int y, int weight, bool isDialogable, bool isPickable)
         {
             Name = name;
-            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\woodLog.png";
-            ItemSprite = Image.FromFile(path);
+            Weight = weight;
+            
             X = x;
             Y = y;
-            Weight = weight;
+
+            IsDialogable = isDialogable;
+            IsPickable = isPickable;
+            
+            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\woodLog.png";
+            ItemSprite = Image.FromFile(path);
         }
         
-        public bool IsNearby(int x, int y)
+        public bool IsNearby(float x, float y)
         {
             return Math.Sqrt((x - X * 2) * (x - X * 2) + (y - Y * 2) * (y - Y * 2)) <= 70;
         }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace Model
 {
@@ -14,7 +13,7 @@ namespace Model
         
         public Map(Size size)
         {
-            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Map.png";
+            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\TestMap.png";
             MapSprite = (Bitmap)Image.FromFile(path);
             Anchor = new PointF(size.Width, size.Height);
         }
@@ -45,6 +44,11 @@ namespace Model
 
             Anchor.X = PlayerSpeed * Move.X;
             Anchor.Y = PlayerSpeed * Move.Y;
+        }
+
+        public PointF GetOnMapCoordinates(float x, float y)
+        {
+            return new PointF(Anchor.X - x, Anchor.Y - y);
         }
     }
 }

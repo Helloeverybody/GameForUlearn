@@ -8,7 +8,7 @@ namespace Model
         public int Weight;
         public int CellNumber;
 
-        public void ToOnMap()
+        public void OnMap()
         {
             
         }
