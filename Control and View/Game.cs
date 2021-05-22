@@ -16,10 +16,8 @@ namespace My_game_for_Ulearn
         
         public Map Map { get; set; }
         public Player Player { get; set; }
-        public Timer PaintTimer { get; }
-        public Timer WalkTimer { get; }
-        public List<OnMapItem> ItemsOnMap { get; set; }
-        
+        public Timer Timer { get; }
+
         public Game(MainForm form)
         {
             ClientSize = Screen.PrimaryScreen.Bounds.Size;
@@ -29,28 +27,16 @@ namespace My_game_for_Ulearn
             Map = new Map(Size);
             
             // TODO оно лагает все равно, нужно пофиксить
-            WalkTimer = new Timer { Interval = 10 };
-            WalkTimer.Start();
-            WalkTimer.Tick += OnWalkTick;
-            
-            PaintTimer = new Timer { Interval = 10 };
-            PaintTimer.Start();
-            PaintTimer.Tick += OnTick;
+            Timer = new Timer { Interval = 10 };
+            Timer.Start();
+            Timer.Tick += OnTick;
             
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
                      ControlStyles.AllPaintingInWmPaint |
                      ControlStyles.UserPaint, true);
             UpdateStyles();
 
-            ItemsOnMap = new List<OnMapItem>();
-            AddItemsOnMap();
-        }
-
-        public void AddItemsOnMap()
-        {
-            ItemsOnMap.Add(new OnMapItem("testItem", 20, 20, 10, true, true));
-            ItemsOnMap.Add(new OnMapItem("testItem", 100, 20, 10, false, true));
-            ItemsOnMap.Add(new OnMapItem("testItem", 180, 20, 10, true, false));
+            Map.AddItemsOnMap();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -59,38 +45,33 @@ namespace My_game_for_Ulearn
             
             var rect = new Rectangle(new Point(0, 0), Size);
             
-            g.DrawImage(Map.MapSprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Point);
+            g.DrawImage(Map.Sprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
 
-            foreach (var item in ItemsOnMap)
+            foreach (var item in Map.ItemsOnMap)
             {
-                var itemCoords = Map.GetOnMapCoordinates(item.X, item.Y);
-                g.DrawImage(item.ItemSprite, rect, itemCoords.X, itemCoords.Y,
-                    Size.Width, Size.Height, GraphicsUnit.Point);
+                g.DrawImage(item.ItemSprite, rect, item.OnMapCoordinates.X, item.OnMapCoordinates.Y,
+                    Size.Width, Size.Height, GraphicsUnit.Pixel);
             }
-                
-            g.DrawImage(Player.playerSprite, Player.X - 25, Player.Y - 25, 50,50);
+
+            g.DrawImage(Player.Sprite, Player.X - Player.Sprite.Width / 2, Player.Y - Player.Sprite.Height / 2);
             
-            //TODO кажется, слишком долго просчитывает, отрисовка начинает тормозить, поправить
-            var nearbyItems = Player.NearbyItems(ItemsOnMap, Map.Anchor);
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\eIcon.png";
             var eIcon = (Bitmap)Image.FromFile(path);
             
+            //TODO кажется, слишком долго просчитывает, отрисовка начинает тормозить, поправить
             //TODO опять неправильно высчитывает координаты 
-            foreach (var itemCoords in nearbyItems.Select(item => Map.GetOnMapCoordinates(item.X, item.Y - 15)))
+            foreach (var itemCoords in Map.ItemsNearPlayer.Select(item => Map.GetOnMapCoordinates(item.X, item.Y - 40)))
             {
                 g.DrawImage(eIcon, rect, itemCoords.X, itemCoords.Y,
-                    Size.Width, Size.Height, GraphicsUnit.Point);
+                    Size.Width, Size.Height, GraphicsUnit.Pixel);
             }
         }
 
         private void OnTick(object sender, EventArgs e)
         {
-            Refresh(); 
-        }
-        
-        private void OnWalkTick(object sender, EventArgs e)
-        {
+            Map.UpdateMap(Player);
             Map.Translate();
+            Refresh(); 
         }
         
         protected override void OnKeyDown(KeyEventArgs e)
@@ -99,23 +80,15 @@ namespace My_game_for_Ulearn
             
             if (e.KeyCode == Keys.E)
             {
-                //TODO может собрать несобираемые предметы,если рядом лежат собираемые
-                if (Player.NearbyItems(ItemsOnMap, Map.Anchor).Count(x => x.IsDialogable) != 0)
+                if (Map.ItemsNearPlayer.Count(x => x.IsDialogable) != 0)
                 {
                     mainForm.StartDialog();
                 } 
                 
-                if (Player.NearbyItems(ItemsOnMap, Map.Anchor).Count(x => x.IsPickable) != 0)
+                if (Map.ItemsNearPlayer.Count(x => x.IsPickable) != 0)
                 {
-                    foreach (var item in Player.NearbyItems(ItemsOnMap, Map.Anchor))
-                    {
-                        //TODO выдает эксепшн, поправить
-                        //Player.Inventory.Add(item);
-                        ItemsOnMap.Remove(item);
-                    }
-                } 
-
-                var dialog = new Model.Dialog("Это тестовоый диалог.");
+                    Map.PickUpItem(Player.Inventory);
+                }
             }
 
             if (e.KeyCode == Keys.Escape)

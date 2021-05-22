@@ -8,7 +8,7 @@ namespace Model
     {
         public int X;
         public int Y;
-        public Image playerSprite;
+        public Image Sprite;
         
         public Inventory Inventory { get; set; }
 
@@ -23,7 +23,7 @@ namespace Model
             Y = y;
             
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
-            playerSprite = Image.FromFile(path);
+            Sprite = Image.FromFile(path);
         }
 
         public List<OnMapItem> NearbyItems(IEnumerable<OnMapItem> items, PointF anchor)
