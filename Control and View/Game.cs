@@ -12,11 +12,14 @@ namespace My_game_for_Ulearn
     public class Game : UserControl
     {
         private MainForm mainForm;
-        private IContainer components;
         
         public Map Map { get; set; }
         public Player Player { get; set; }
         public Timer Timer { get; }
+        
+        public Timer PathFinderTimer { get; }
+
+        public Monster monster { get; set; }
 
         public Game(MainForm form)
         {
@@ -25,11 +28,17 @@ namespace My_game_for_Ulearn
             
             Player = new Player(Size.Width / 2, Size.Height / 2);
             Map = new Map(Size);
+
+            monster = new Monster(80, 80);
             
             // TODO оно лагает все равно, нужно пофиксить
             Timer = new Timer { Interval = 10 };
             Timer.Start();
             Timer.Tick += OnTick;
+            
+            PathFinderTimer = new Timer { Interval = 1000 };
+            PathFinderTimer.Start();
+            PathFinderTimer.Tick += OnPathFinderTick;
             
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
                      ControlStyles.AllPaintingInWmPaint |
@@ -65,14 +74,31 @@ namespace My_game_for_Ulearn
                 g.DrawImage(eIcon, rect, itemCoords.X, itemCoords.Y,
                     Size.Width, Size.Height, GraphicsUnit.Pixel);
             }
+            
+            g.DrawImage(monster.Sprite, rect, Map.Anchor.X - monster.X, Map.Anchor.Y - monster.Y,
+                Size.Width, Size.Height, GraphicsUnit.Pixel);
+            
+            var font = new Font("SlimamifMedium", 40, FontStyle.Bold, GraphicsUnit.Pixel);
+            g.DrawString("X: " + monster.X, font, Brushes.Black, new PointF(Size.Width / 9, 
+                Size.Height * 2 / 3), StringFormat.GenericTypographic);
+            g.DrawString("Y: " + monster.Y, font, Brushes.Black, new PointF(Size.Width / 9, 
+                Size.Height * 2 / 3 + 50), StringFormat.GenericTypographic);
         }
+
+        private SinglyLinkedList<Point> path;
 
         private void OnTick(object sender, EventArgs e)
         {
-            Map.UpdateMap(Player);
-            Map.Translate();
-            Refresh(); 
+            path = monster.Move(path);
+            Player.MovePlayer(Map);
+            Invalidate(); 
         }
+        
+        private void OnPathFinderTick(object sender, EventArgs e)
+        {
+            path = PathFinder.FindPaths(Map.PathfinderGrid, 
+                new Point(monster.X, monster.Y), new Point((int)(Map.Anchor.X + Player.X), (int)(Map.Anchor.Y + Player.Y)));
+        }        
         
         protected override void OnKeyDown(KeyEventArgs e)
         {

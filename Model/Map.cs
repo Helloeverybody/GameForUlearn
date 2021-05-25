@@ -9,13 +9,14 @@ namespace Model
     {
         public PointF Anchor;
         public Bitmap Sprite;
-        
-        public PointF Move;
-        public Availability[,] AccessMap;
+
+        private PointF move;
+        public State[,] PathfinderGrid;
+
         public List<OnMapItem> ItemsOnMap { get; set; }
         public List<OnMapItem> ItemsNearPlayer { get; set; } = new List<OnMapItem>();
 
-        private readonly float PlayerSpeed = 2.5f;
+        private readonly float playerSpeed = 4f;
         
         public bool MoveBack = false;
         public bool MoveForward = false;
@@ -25,39 +26,52 @@ namespace Model
         public Map(Size size)
         {
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\TestMap.png";
-            Move = new PointF(0, 0);
+            move = new PointF(0, 0);
             Anchor = new PointF(size.Width, size.Height);
             Sprite = (Bitmap)Image.FromFile(path);
             ItemsOnMap = new List<OnMapItem>();
+            InitializeGrid();
         }
         
-        public enum Availability
+        public enum State
         {
-            Available,
-            Unavailable
+            Free,
+            Engaged
         }
+
+        public void InitializeGrid()
+        {
+            PathfinderGrid = new State [Sprite.Size.Width + 300, Sprite.Size.Height + 300];
+            for (var i = 0; i < PathfinderGrid.GetLength(0); i++)
+            {
+                for (var j = 0; j < PathfinderGrid.GetLength(1); j++)
+                {
+                    PathfinderGrid[i,j] = State.Free;
+                }
+            }
+        }  
         
         public void Translate()
         {
             if (MoveForward && MoveLeft)
-                Move = new PointF(Move.X - 0.7f, Move.Y - 0.7f);
+                move = new PointF(move.X - 0.7f, move.Y - 0.7f);
             else if (MoveForward && MoveRight)
-                Move = new PointF(Move.X + 0.7f, Move.Y -0.7f);
+                move = new PointF(move.X + 0.7f, move.Y -0.7f);
             else if (MoveBack && MoveLeft)
-                Move = new PointF(Move.X - 0.7f, Move.Y + 0.7f);
+                move = new PointF(move.X - 0.7f, move.Y + 0.7f);
             else if (MoveBack && MoveRight )
-                Move = new PointF(Move.X + 0.7f, Move.Y + 0.7f);
+                move = new PointF(move.X + 0.7f, move.Y + 0.7f);
             else if (MoveForward)
-                Move = new PointF(Move.X + 0, Move.Y-1);
+                move = new PointF(move.X + 0, move.Y-1);
             else if (MoveBack)
-                Move = new PointF(Move.X + 0, Move.Y + 1);
+                move = new PointF(move.X + 0, move.Y + 1);
             else if (MoveRight)
-                Move = new PointF(Move.X + 1, Move.Y + 0);
+                move = new PointF(move.X + 1, move.Y + 0);
             else if (MoveLeft)
-                Move = new PointF(Move.X - 1, Move.Y + 0);
+                move = new PointF(move.X - 1, move.Y + 0);
 
-            Anchor.X = PlayerSpeed * Move.X;
-            Anchor.Y = PlayerSpeed * Move.Y;
+            Anchor.X = playerSpeed * move.X;
+            Anchor.Y = playerSpeed * move.Y;
         }
 
         public PointF GetOnMapCoordinates(float x, float y)

@@ -30,5 +30,11 @@ namespace Model
         {
             return items.Where(item => item.IsNearby(anchor.X + X, anchor.Y + Y)).ToList();
         }
+
+        public void MovePlayer(Map map)
+        {
+            map.UpdateMap(this);
+            map.Translate();
+        }
     }
 }

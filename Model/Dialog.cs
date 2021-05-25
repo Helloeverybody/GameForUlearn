@@ -38,8 +38,6 @@ namespace Model
             timer.Interval = 100;
             timer.Start();
             
-            
-            
             var letters = Text.ToArray();
             var font = new Font("SlimamifMedium", 20, FontStyle.Bold, GraphicsUnit.Pixel);
             float lineWidth = 0;

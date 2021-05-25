@@ -1,0 +1,12 @@
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\bin\Debug\ModelTests.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\bin\Debug\ModelTests.pdb
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\bin\Debug\Model.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\bin\Debug\nunit.framework.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\bin\Debug\System.Drawing.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\bin\Debug\Model.pdb
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\bin\Debug\nunit.framework.xml
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\obj\Debug\ModelTests.csprojAssemblyReference.cache
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\obj\Debug\ModelTests.csproj.CoreCompileInputs.cache
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\obj\Debug\ModelTests.csproj.CopyComplete
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\obj\Debug\ModelTests.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\ModelTests\obj\Debug\ModelTests.pdb
