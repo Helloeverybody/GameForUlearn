@@ -11,13 +11,11 @@ namespace Model
         public Bitmap Sprite;
 
         private PointF move;
-        public State[,] PathfinderGrid;
-
+        public GridState[,] PathfinderGrid;
+        public readonly int GridScale;
         public List<OnMapItem> ItemsOnMap { get; set; }
         public List<OnMapItem> ItemsNearPlayer { get; set; } = new List<OnMapItem>();
 
-        private readonly float playerSpeed = 4f;
-        
         public bool MoveBack = false;
         public bool MoveForward = false;
         public bool MoveLeft = false;
@@ -25,33 +23,28 @@ namespace Model
         
         public Map(Size size)
         {
-            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\TestMap.png";
+            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Map.png";
             move = new PointF(0, 0);
             Anchor = new PointF(size.Width, size.Height);
             Sprite = (Bitmap)Image.FromFile(path);
             ItemsOnMap = new List<OnMapItem>();
+            GridScale = 4;
+            AddItemsOnMap();
             InitializeGrid();
         }
         
-        public enum State
-        {
-            Free,
-            Engaged
-        }
+        
 
         public void InitializeGrid()
         {
-            PathfinderGrid = new State [Sprite.Size.Width + 300, Sprite.Size.Height + 300];
+            PathfinderGrid = new GridState [Sprite.Size.Width / GridScale, Sprite.Size.Height / GridScale];
+            
             for (var i = 0; i < PathfinderGrid.GetLength(0); i++)
-            {
                 for (var j = 0; j < PathfinderGrid.GetLength(1); j++)
-                {
-                    PathfinderGrid[i,j] = State.Free;
-                }
-            }
+                    PathfinderGrid[i,j] = GridState.Free;
         }  
         
-        public void Translate()
+        public void Translate(float playerSpeed)
         {
             if (MoveForward && MoveLeft)
                 move = new PointF(move.X - 0.7f, move.Y - 0.7f);
@@ -81,7 +74,7 @@ namespace Model
         
         public void AddItemsOnMap()
         {
-            ItemsOnMap.Add(new OnMapItem("testItem", 20, 20, 10, false, true));
+            //ItemsOnMap.Add(new OnMapItem("testItem", 20, 20, 10, false, true));
             //ItemsOnMap.Add(new OnMapItem("testItem", 100, 20, 10, false, true));
             //ItemsOnMap.Add(new OnMapItem("testItem", 180, 20, 10, true, false));
         }
@@ -90,9 +83,7 @@ namespace Model
         {
             ItemsNearPlayer = player.NearbyItems(ItemsOnMap, Anchor);
             foreach (var item in ItemsOnMap)
-            {
                 item.OnMapCoordinates = GetOnMapCoordinates(item.X, item.Y);
-            }
         }
 
         public void PickUpItem(Inventory inventory)

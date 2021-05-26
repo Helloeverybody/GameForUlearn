@@ -18,12 +18,12 @@ namespace Model
             Y = y;
         }
         
-        public SinglyLinkedList<Point> Move(SinglyLinkedList<Point> path)
+        public SinglyLinkedList<Point> Move(SinglyLinkedList<Point> path, int gridScale)
         {
             if (path == null)
                 return null;
-            X = path.Value.X;
-            Y = path.Value.Y;
+            X = path.Value.X * gridScale;
+            Y = path.Value.Y * gridScale;
             return path.Previous;
         }
     }

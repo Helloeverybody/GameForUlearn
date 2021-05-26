@@ -9,8 +9,8 @@ namespace Model
         public int X;
         public int Y;
         public Image Sprite;
-        
         public Inventory Inventory { get; set; }
+        private readonly float playerSpeed = 4f;
 
         // public List<OnMapItem> NearbyItems
         // {
@@ -34,7 +34,7 @@ namespace Model
         public void MovePlayer(Map map)
         {
             map.UpdateMap(this);
-            map.Translate();
+            map.Translate(playerSpeed);
         }
     }
 }
