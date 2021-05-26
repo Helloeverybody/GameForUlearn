@@ -51,8 +51,7 @@
         <Compile Include="PathFinder.cs" />
         <Compile Include="Player.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Scales\MadnessScale.cs" />
-        <Compile Include="Scales\Scale.cs" />
+        <Compile Include="Scale.cs" />
         <Compile Include="SinglyLinkedList.cs" />
     </ItemGroup>
     <ItemGroup>

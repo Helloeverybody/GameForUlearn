@@ -57,7 +57,7 @@ namespace My_game_for_Ulearn
             g.FillRectangle(Brushes.Black, Size.Width / 3, Size.Height / 10,
                 Size.Width / 3, Size.Height / 5);
             var font = new Font("SlimamifMedium", 60, FontStyle.Bold, GraphicsUnit.Pixel);
-            g.DrawString("МОЯ ИГРА", font, Brushes.White, new PointF(Size.Width * 4 / 10, 
+            g.DrawString("Tainted World", font, Brushes.White, new PointF(Size.Width * 38 / 100, 
                 Size.Height / 10 + 20), StringFormat.GenericTypographic);
         }
     }

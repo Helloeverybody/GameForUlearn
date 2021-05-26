@@ -11,28 +11,42 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="7 неделя. Добавлено больше тестов на алгоритм, отремонтирован сам алгоритм, поставлена большая карта, проведен небольшой рефакторинг.">
+    <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="7 неделя. Поставлена зона видимости для монстра. Добавлена кнопка выхода из игры. Добавлена кнопка выхода в главное меню. Кнопка паузы теперь работает правильно.">
+      <change afterPath="$PROJECT_DIR$/Control and View/Dead.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/Scale.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/Control and View.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Control and View.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Dialog.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control and View/GameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/GameMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/MainForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Monster.aseprite" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/Control and View.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Map.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Monster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/PathFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/PathFinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Scales/MadnessScale.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Scales/Scale.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModelTests/PathFinderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/PathFinderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +85,11 @@
     <setting file="file://$USER_HOME$/Documents/GitHub/Immunity-Game/Assets/Scripts/PathData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/6a/16e0d01a/UserControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Control and View/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/Control and View/Game.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Player.cs" />
-      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Map.cs" />
-      <option value="$PROJECT_DIR$/Model/Class1.cs" />
       <option value="$PROJECT_DIR$/Model/GameObjectState.cs" />
-      <option value="$PROJECT_DIR$/Model/Scales/Scale.cs" />
       <option value="$PROJECT_DIR$/Model/GameStates/Game.cs" />
       <option value="$PROJECT_DIR$/Model/GameStates/MainMenue.cs" />
       <option value="$PROJECT_DIR$/Model/Item.cs" />
@@ -104,7 +115,6 @@
       <option value="$PROJECT_DIR$/Control and View/Drawer.cs" />
       <option value="$PROJECT_DIR$/Control and View/MainForm.Designer.cs" />
       <option value="$PROJECT_DIR$/Control and View/Inventory.cs" />
-      <option value="$PROJECT_DIR$/Control and View/Dialog.cs" />
       <option value="$PROJECT_DIR$/Control and View/FastPAinter.cs" />
       <option value="$PROJECT_DIR$/Control and View/painter.cs" />
       <option value="$PROJECT_DIR$/Model/Inventory.cs" />
@@ -115,16 +125,21 @@
       <option value="$PROJECT_DIR$/PathFinder/PathFinder.cs" />
       <option value="$PROJECT_DIR$/ModelTests/UnitTests.cs" />
       <option value="$PROJECT_DIR$/Model/GridScale.cs" />
-      <option value="$PROJECT_DIR$/Model/Player.cs" />
       <option value="$PROJECT_DIR$/Model/PathFinder.cs" />
-      <option value="$PROJECT_DIR$/Control and View/MainMenu.cs" />
-      <option value="$PROJECT_DIR$/Model/Map.cs" />
       <option value="$PROJECT_DIR$/Model/Monster.cs" />
       <option value="$PROJECT_DIR$/Control and View/GameMenu.cs" />
-      <option value="$PROJECT_DIR$/Control and View/MainForm.cs" />
-      <option value="$PROJECT_DIR$/Control and View/Game.cs" />
-      <option value="$PROJECT_DIR$/ModelTests/PathFinderTests.cs" />
       <option value="$PROJECT_DIR$/Model/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Model/Scales/MadnessScale.cs" />
+      <option value="$PROJECT_DIR$/Model/Scales/Scale.cs" />
+      <option value="$PROJECT_DIR$/Control and View/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Control and View/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Control and View/MainForm.cs" />
+      <option value="$PROJECT_DIR$/Model/Player.cs" />
+      <option value="$PROJECT_DIR$/Model/Scale.cs" />
+      <option value="$PROJECT_DIR$/Control and View/Dead.cs" />
+      <option value="$PROJECT_DIR$/ModelTests/PathFinderTests.cs" />
+      <option value="$PROJECT_DIR$/Model/Map.cs" />
+      <option value="$PROJECT_DIR$/Control and View/Game.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -154,7 +169,7 @@
     <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.My game for Ulearn">
+  <component name="RunManager">
     <configuration name="My game for Ulearn" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -219,7 +234,7 @@
       <workItem from="1621653618810" duration="13369000" />
       <workItem from="1621922406665" duration="5019000" />
       <workItem from="1621955619976" duration="16914000" />
-      <workItem from="1621996121058" duration="29862000" />
+      <workItem from="1621996121058" duration="44661000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>
@@ -354,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622022968022</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="7 неделя. Поставлена зона видимости для монстра. Добавлена кнопка выхода из игры. Добавлена кнопка выхода в главное меню. Кнопка паузы теперь работает правильно.">
+      <created>1622032530336</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1622032530336</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,6 +459,7 @@
     <MESSAGE value="7 неделя. Перенес в Map функционал из Game, удалил класс Vector, добавил алгоритм поиска в ширину, сделал небольшие правки классов Map и Monster. Добавил спрайт монстра." />
     <MESSAGE value="7 неделя. Добавлен и проработан класс монстра, добавлен алгоритм поиска в ширину для того чтобы монстр мог находить путь к игроку (не работоспособно, ошибка в алгоритме). Добавлен грид для карты. Установлена библиотека NUnit. Написано несколько юнит тестов на алгоритм." />
     <MESSAGE value="7 неделя. Добавлено больше тестов на алгоритм, отремонтирован сам алгоритм, поставлена большая карта, проведен небольшой рефакторинг." />
-    <option name="LAST_COMMIT_MESSAGE" value="7 неделя. Добавлено больше тестов на алгоритм, отремонтирован сам алгоритм, поставлена большая карта, проведен небольшой рефакторинг." />
+    <MESSAGE value="7 неделя. Поставлена зона видимости для монстра. Добавлена кнопка выхода из игры. Добавлена кнопка выхода в главное меню. Кнопка паузы теперь работает правильно." />
+    <option name="LAST_COMMIT_MESSAGE" value="7 неделя. Поставлена зона видимости для монстра. Добавлена кнопка выхода из игры. Добавлена кнопка выхода в главное меню. Кнопка паузы теперь работает правильно." />
   </component>
 </project>

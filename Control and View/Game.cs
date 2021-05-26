@@ -34,7 +34,7 @@ namespace My_game_for_Ulearn
             UpdateStyles();
         }
 
-        public void InitializeTimers()
+        private void InitializeTimers()
         {
             Timer = new Timer { Interval = 10 };
             Timer.Start();
@@ -44,7 +44,7 @@ namespace My_game_for_Ulearn
             PathFinderTimer.Start();
             PathFinderTimer.Tick += OnPathFinderTick;
             
-            MonsterMoveTimer = new Timer { Interval = 30 };
+            MonsterMoveTimer = new Timer { Interval = 20 };
             MonsterMoveTimer.Start();
             MonsterMoveTimer.Tick += OnMoveMonsterTick;
         }
@@ -92,12 +92,30 @@ namespace My_game_for_Ulearn
             
             g.DrawImage(Monster.Sprite, rect, Map.Anchor.X - Monster.X, Map.Anchor.Y - Monster.Y + Monster.Sprite.Height,
                 Size.Width, Size.Height, GraphicsUnit.Pixel);
+
+            g.FillRectangle(Brushes.Black, Size.Width / 80, Size.Height / 40, Size.Width / 3, Size.Height / 10);
+            g.FillRectangle(Brushes.Gray, Size.Width / 40, Size.Height / 20, Size.Width * 31 / 100, Size.Height / 20);
+            g.FillRectangle(Brushes.RosyBrown, Size.Width / 40, Size.Height / 20,
+                Player.MadnessScale.Value * Size.Width * 31 / (100 * Player.MadnessScale.maxValue) , Size.Height / 20);
         }
         
         private void OnTick(object sender, EventArgs e)
         {
             Player.MovePlayer(Map);
-            Invalidate(); 
+            if (Player.Damaging(Monster, Map.Anchor))
+            {
+                Player.MadnessScale.Value++;
+            }
+            else if(Player.MadnessScale.Value != Player.MadnessScale.minValue)
+            {
+                Player.MadnessScale.Value--;
+            }
+
+            if (Player.MadnessScale.Value >= Player.MadnessScale.maxValue) 
+            {
+                mainForm.Die();
+            }
+            Invalidate();
         }
         
         private void OnPathFinderTick(object sender, EventArgs e)

@@ -10,6 +10,7 @@ namespace My_game_for_Ulearn
         private Inventory inventory;
         private GameMenu gameMenu;
         private Dialog dialog;
+        private Dead dead;
         
         public MainForm()
         {
@@ -28,11 +29,14 @@ namespace My_game_for_Ulearn
             dialog = new Dialog(this) { Enabled = false };
             dialog.Hide();
             
+            dead = new Dead(this) { Enabled = false };
+            dead.Hide();
+            
             SuspendLayout();
             Text = "Game";
             WindowState = FormWindowState.Maximized;
             ClientSize = Screen.PrimaryScreen.Bounds.Size;
-            Controls.AddRange(new Control[] {mainMenu, game, inventory, gameMenu, dialog});
+            Controls.AddRange(new Control[] {mainMenu, game, inventory, gameMenu, dialog, dead});
             ResumeLayout(false);
             
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
@@ -43,6 +47,8 @@ namespace My_game_for_Ulearn
 
         public void StartGame()
         {
+            //костыль, игра должна начинаться с начала
+            game.StartGame();
             FromControlToControl(mainMenu, game);
         }
         
@@ -81,6 +87,16 @@ namespace My_game_for_Ulearn
         public void EndDialog()
         {
             FromControlToControl(dialog, game);
+        }
+        
+        public void FromDeadToMenu()
+        {
+            FromControlToControl(dead, mainMenu);
+        }
+        
+        public void Die()
+        {
+            FromControlToControl(game, dead);
         }
 
         private static void FromControlToControl(UserControl fromThis, UserControl toThis)

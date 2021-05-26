@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+
 namespace Model
 {
     public class Player
@@ -10,6 +11,7 @@ namespace Model
         public int Y;
         public Image Sprite;
         public Inventory Inventory { get; set; }
+        public Scale MadnessScale;
         private readonly float playerSpeed = 4f;
 
         // public List<OnMapItem> NearbyItems
@@ -21,6 +23,8 @@ namespace Model
         {
             X = x;
             Y = y;
+
+            MadnessScale = new Scale();
             
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
             Sprite = Image.FromFile(path);
@@ -34,6 +38,12 @@ namespace Model
         public bool NearbyMonsters(Monster monster, PointF anchor)
         {
             return monster.IsNearby(anchor.X + X, anchor.Y + Y);
+        }
+        
+        public bool Damaging(Monster monster, PointF anchor)
+        {
+            return Math.Sqrt((anchor.X + X - monster.X) * (anchor.X + X - monster.X) + 
+                             (anchor.Y + Y - monster.Y) * (anchor.Y + Y - monster.Y)) <= 200;
         }
 
         public void MovePlayer(Map map)

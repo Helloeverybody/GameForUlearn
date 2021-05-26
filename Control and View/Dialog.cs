@@ -7,7 +7,6 @@ namespace My_game_for_Ulearn
     public class Dialog : UserControl
     {
         private static MainForm mainForm;
-        private IContainer components;
         public Bitmap Background = new Bitmap(1, 1);
         
         public Dialog(MainForm form)
@@ -23,7 +22,7 @@ namespace My_game_for_Ulearn
             g.DrawImage(Background, new Point(0, 0));
             //DrawGame(sender, e); надо бы за диалогом игру отрисовывать....
             
-            var a = new Model.Dialog("Это тестовоый диалог. Это тестовоый диалог. Это тестовоый диалог. Это тестовоый диалог.");
+            var a = new Model.Dialog("Это тестовоый диалог.");
             a.DrawDialog(g, mainForm.Size);
         }
         

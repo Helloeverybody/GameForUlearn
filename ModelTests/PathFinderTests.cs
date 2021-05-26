@@ -45,36 +45,19 @@ namespace ModelTests
             Assert.AreEqual(1, path.Length);
         }
         
-        [TestCase(0, 0, 2, 2)]
-        public void IsCorrectPath(int x1, int y1, int x2, int y2)
+        [TestCase(0, 0, 2, 2, 3)]
+        [TestCase(1, 1, 2, 2, 1)]
+        [TestCase(1, 1, 5, 5, 3)]
+        [TestCase(5, 5, 1, 1, 3)]
+        public void IsCorrectPath(int startX, int startY, int endX, int endY, int expectedLength)
         {
-            var start = new Point(x1, y1);
-            var end = new Point(x2, y2);
-            var map = InitializeMap(3, 3);
+            var start = new Point(startX, startY);
+            var end = new Point(endX, endY);
+            var map = InitializeMap(10, 10);
             var path = PathFinder.FindPaths(map, start, end);
             Assert.AreEqual(end, path.Value);
-            Assert.AreEqual(5, path.Length);
+            Assert.AreEqual(expectedLength, path.Length);
         }
-
-        // [TestCase(1, 1,
-        //     0, 1,
-        //     1, 0,
-        //     2, 1,
-        //     1, 2)]
-        // public static void NeighboursTest(int x, int y, 
-        //     int expX1, int expY1, 
-        //     int expX2, int expY2, 
-        //     int expX3, int expY3, 
-        //     int expX4, int expY4)
-        // {
-        //     var map = InitializeMap(6, 6);
-        //     var visited = new HashSet<Point>();
-        //     var queue = new Queue<SinglyLinkedList<Point>>();
-        //     var path = new SinglyLinkedList<Point>(new Point(x, y));
-        //     PathFinder.AddNeighbours(map, queue, path, visited, new Point(x, y));
-        //     
-        //     Assert.AreEqual(,);
-        // }
         
         [TestCase(-1, 0, false, 0, 0)]
         [TestCase(0, -1, false, 0, 0)]

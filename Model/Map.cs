@@ -9,17 +9,17 @@ namespace Model
     {
         public PointF Anchor;
         public Bitmap Sprite;
-
         private PointF move;
         public GridState[,] PathfinderGrid;
         public readonly int GridScale;
-        public List<OnMapItem> ItemsOnMap { get; set; }
-        public List<OnMapItem> ItemsNearPlayer { get; set; } = new List<OnMapItem>();
-
+        
         public bool MoveBack = false;
         public bool MoveForward = false;
         public bool MoveLeft = false;
         public bool MoveRight = false;
+        
+        public List<OnMapItem> ItemsOnMap { get; set; }
+        public List<OnMapItem> ItemsNearPlayer { get; set; } 
         
         public Map(Size size)
         {
@@ -27,8 +27,10 @@ namespace Model
             move = new PointF(0, 0);
             Anchor = new PointF(size.Width, size.Height);
             Sprite = (Bitmap)Image.FromFile(path);
-            ItemsOnMap = new List<OnMapItem>();
             GridScale = 4;
+            ItemsOnMap = new List<OnMapItem>();
+            ItemsNearPlayer = new List<OnMapItem>();
+            
             //AddItemsOnMap();
             InitializeGrid();
         }
