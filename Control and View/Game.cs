@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -11,16 +12,14 @@ namespace My_game_for_Ulearn
 {
     public class Game : UserControl
     {
-        private MainForm mainForm;
+        private readonly MainForm mainForm;
+        private Map Map { get; set; }
+        private Player Player { get; set; }
+        private Timer Timer { get; }
+        private Timer PathFinderTimer { get; }
+        private Monster Monster { get; set; }
+        private SinglyLinkedList<Point> Path { get; set; }
         
-        public Map Map { get; set; }
-        public Player Player { get; set; }
-        public Timer Timer { get; }
-        
-        public Timer PathFinderTimer { get; }
-
-        public Monster monster { get; set; }
-
         public Game(MainForm form)
         {
             ClientSize = Screen.PrimaryScreen.Bounds.Size;
@@ -29,9 +28,8 @@ namespace My_game_for_Ulearn
             Player = new Player(Size.Width / 2, Size.Height / 2);
             Map = new Map(Size);
 
-            monster = new Monster(80, 80);
+            Monster = new Monster(80, 80);
             
-            // TODO оно лагает все равно, нужно пофиксить
             Timer = new Timer { Interval = 10 };
             Timer.Start();
             Timer.Tick += OnTick;
@@ -44,12 +42,11 @@ namespace My_game_for_Ulearn
                      ControlStyles.AllPaintingInWmPaint |
                      ControlStyles.UserPaint, true);
             UpdateStyles();
-
-            Map.AddItemsOnMap();
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            //TODO отрисовка тормозит, поправить
             var g = e.Graphics;
             
             var rect = new Rectangle(new Point(0, 0), Size);
@@ -62,42 +59,36 @@ namespace My_game_for_Ulearn
                     Size.Width, Size.Height, GraphicsUnit.Pixel);
             }
 
-            g.DrawImage(Player.Sprite, Player.X - Player.Sprite.Width / 2, Player.Y - Player.Sprite.Height / 2);
+            g.DrawImage(Player.Sprite, Player.X - Player.Sprite.Width / 2, Player.Y - Player.Sprite.Height);
             
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\eIcon.png";
             var eIcon = (Bitmap)Image.FromFile(path);
             
-            //TODO кажется, слишком долго просчитывает, отрисовка начинает тормозить, поправить
-            //TODO опять неправильно высчитывает координаты 
+            
             foreach (var itemCoords in Map.ItemsNearPlayer.Select(item => Map.GetOnMapCoordinates(item.X, item.Y - 40)))
             {
                 g.DrawImage(eIcon, rect, itemCoords.X, itemCoords.Y,
                     Size.Width, Size.Height, GraphicsUnit.Pixel);
             }
             
-            g.DrawImage(monster.Sprite, rect, Map.Anchor.X - monster.X, Map.Anchor.Y - monster.Y,
+            g.DrawImage(Monster.Sprite, rect, Map.Anchor.X - Monster.X, Map.Anchor.Y - Monster.Y + Monster.Sprite.Height,
                 Size.Width, Size.Height, GraphicsUnit.Pixel);
-            
-            var font = new Font("SlimamifMedium", 40, FontStyle.Bold, GraphicsUnit.Pixel);
-            g.DrawString("X: " + monster.X, font, Brushes.Black, new PointF(Size.Width / 9, 
-                Size.Height * 2 / 3), StringFormat.GenericTypographic);
-            g.DrawString("Y: " + monster.Y, font, Brushes.Black, new PointF(Size.Width / 9, 
-                Size.Height * 2 / 3 + 50), StringFormat.GenericTypographic);
         }
-
-        private SinglyLinkedList<Point> path;
-
+        
         private void OnTick(object sender, EventArgs e)
         {
-            path = monster.Move(path);
+            Path = Monster.Move(Path, Map.GridScale);
             Player.MovePlayer(Map);
             Invalidate(); 
         }
         
         private void OnPathFinderTick(object sender, EventArgs e)
         {
-            path = PathFinder.FindPaths(Map.PathfinderGrid, 
-                new Point(monster.X, monster.Y), new Point((int)(Map.Anchor.X + Player.X), (int)(Map.Anchor.Y + Player.Y)));
+            var playerDistrict = new Point((int) (Map.Anchor.X + Player.X) / Map.GridScale,
+                (int) (Map.Anchor.Y + Player.Y) / Map.GridScale);
+            Path = PathFinder.FindPaths(Map.PathfinderGrid, 
+                playerDistrict, 
+                new Point(Monster.X / Map.GridScale, Monster.Y / Map.GridScale));
         }        
         
         protected override void OnKeyDown(KeyEventArgs e)
@@ -107,25 +98,17 @@ namespace My_game_for_Ulearn
             if (e.KeyCode == Keys.E)
             {
                 if (Map.ItemsNearPlayer.Count(x => x.IsDialogable) != 0)
-                {
                     mainForm.StartDialog();
-                } 
                 
                 if (Map.ItemsNearPlayer.Count(x => x.IsPickable) != 0)
-                {
                     Map.PickUpItem(Player.Inventory);
-                }
             }
 
             if (e.KeyCode == Keys.Escape)
-            {
                 mainForm.PauseGame();
-            }
 
             if (e.KeyCode == Keys.F)
-            {
                 mainForm.OpenInventory();
-            }
         }
         
         protected override void OnKeyUp(KeyEventArgs e)

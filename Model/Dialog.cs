@@ -25,7 +25,7 @@ namespace Model
                 windowSize.Width * 4 / 5, windowSize.Height / 5);
             //g.DrawImage();
             
-            // декоративные прямоугольники (нгдо бы заменить спрайтом)
+            // декоративные прямоугольники (надо бы заменить спрайтом)
             //g.FillRectangle(Brushes.Tan, windowSize.Width * 31 / 300, windowSize.Height * 2 / 3 + 10,
             //    windowSize.Width * 237 / 300, windowSize.Height / 5 - 20);
             //g.DrawRectangle(Pens.Black, , , windowSize.Width - 60, windowSize.Height / 6);

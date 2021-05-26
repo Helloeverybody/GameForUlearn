@@ -42,6 +42,7 @@
     <ItemGroup>
         <Compile Include="Dialog.cs" />
         <Compile Include="GameObjectState.cs" />
+        <Compile Include="GridState.cs" />
         <Compile Include="Inventory.cs" />
         <Compile Include="InventoryItem.cs" />
         <Compile Include="OnMapItem.cs" />

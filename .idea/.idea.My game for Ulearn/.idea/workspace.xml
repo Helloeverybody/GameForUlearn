@@ -12,34 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd0848af-0097-4e47-b645-6d5dbd81efd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Assets/Monster.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/System.Drawing.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/nunit.framework.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/nunit.framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/CHANGES.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/NOTICES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/NUnit.3.13.2.nupkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/build/NUnit.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/net35/nunit.framework.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/net35/nunit.framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/net40/nunit.framework.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/net40/nunit.framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/net45/nunit.framework.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/net45/nunit.framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/netstandard2.0/nunit.framework.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/NUnit.3.13.2/lib/netstandard2.0/nunit.framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/GridState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My game for Ulearn/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/bin/Debug/Model.dll" afterDir="false" />
@@ -51,17 +24,24 @@
       <change beforePath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Control and View/obj/Debug/My_game_for_Ulearn.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Dialog.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Monster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/PathFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/PathFinder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/Model.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/Model.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModelTests/ModelTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/ModelTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelTests/UnitTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/UnitTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/UnitTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/PathFinderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/bin/Debug/ModelTests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ModelTests/obj/Debug/ModelTests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My game for Ulearn.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/My game for Ulearn.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,20 +63,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Model/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/90/86ac2239/NativeWindow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/Control and View/Game.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/06/7efdb8d0/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/e1/5029cef2/Form.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/65/aa42de5b/Control.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/79/a177b511/Application.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/8b/3e92e6d1/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ModelTests/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/Model/Monster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/33/aada25f9/ScrollableControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/78/4f707c6a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1E9166BF-CA65-4377-B09C-EA42D003812D/f5/1919eb60/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PathFinder/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/View/Drawer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/Model/Map.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Vsevolod/RiderProjects/MygameforUlearn/Model/PathFinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/f1/3048fe79/ContainerControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Model/SinglyLinkedList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Control and View/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
@@ -107,8 +84,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Inventory.cs" />
-      <option value="$PROJECT_DIR$/My game for Ulearn/Model/Item.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Model/Player.cs" />
       <option value="$PROJECT_DIR$/My game for Ulearn/Model/Map.cs" />
       <option value="$PROJECT_DIR$/Model/Class1.cs" />
@@ -151,13 +126,15 @@
       <option value="$PROJECT_DIR$/PathFinder/Class1.cs" />
       <option value="$PROJECT_DIR$/PathFinder/PathFinder.cs" />
       <option value="$PROJECT_DIR$/Control and View/MainForm.cs" />
+      <option value="$PROJECT_DIR$/ModelTests/UnitTests.cs" />
       <option value="$PROJECT_DIR$/Model/Player.cs" />
-      <option value="$PROJECT_DIR$/Model/PathFinder.cs" />
-      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
       <option value="$PROJECT_DIR$/Model/Monster.cs" />
+      <option value="$PROJECT_DIR$/Model/Dialog.cs" />
       <option value="$PROJECT_DIR$/Control and View/Game.cs" />
       <option value="$PROJECT_DIR$/Model/Map.cs" />
-      <option value="$PROJECT_DIR$/ModelTests/UnitTests.cs" />
+      <option value="$PROJECT_DIR$/Model/GridScale.cs" />
+      <option value="$PROJECT_DIR$/Model/PathFinder.cs" />
+      <option value="$PROJECT_DIR$/ModelTests/PathFinderTests.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeFDj3HE7GZ0xXmhevOI5O5GfM" />
@@ -251,7 +228,8 @@
       <workItem from="1621611440583" duration="11438000" />
       <workItem from="1621653618810" duration="13369000" />
       <workItem from="1621922406665" duration="5019000" />
-      <workItem from="1621955619976" duration="16128000" />
+      <workItem from="1621955619976" duration="16914000" />
+      <workItem from="1621996121058" duration="20524000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from rider">
       <created>1617467428063</created>
@@ -365,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621665909875</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="7 неделя. Добавлен и проработан класс монстра, добавлен алгоритм поиска в ширину для того чтобы монстр мог находить путь к игроку (не работоспособно, ошибка в алгоритме). Добавлен грид для карты. Установлена библиотека NUnit. Написано несколько юнит тестов на алгоритм.">
+      <created>1621975759956</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621975759956</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,25 +431,7 @@
     <MESSAGE value="7 неделя. Добавлены новые спрайты и новая карта. Сделаны переходы между состояниями игры, добавлены первичные отображения состояний игры. Проведен общий рефакторинг. Баги - снова лагает (разделение таймеров не помогает), если перейти в другой юзер контрол при зажатой клавише перемещения, при возвращении обратно персонаж будет постоянно стремиться в напралении зажатой клавиши. Так же не понятно, как делать отрисовку инвентаря и диалогов поверх игры, переключением контролов это не представляется возможным." />
     <MESSAGE value="7 неделя. Добавил предметам способность собираться и вызывать диалог, добавил им значок &quot;Е&quot;, который появляется при приближении игрока, добавил рассчет радиуса предметов в радиусе игрока." />
     <MESSAGE value="7 неделя. Перенес в Map функционал из Game, удалил класс Vector, добавил алгоритм поиска в ширину, сделал небольшие правки классов Map и Monster. Добавил спрайт монстра." />
-    <option name="LAST_COMMIT_MESSAGE" value="7 неделя. Перенес в Map функционал из Game, удалил класс Vector, добавил алгоритм поиска в ширину, сделал небольшие правки классов Map и Monster. Добавил спрайт монстра." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Model/PathFinder.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Model\PathFinder.cs" initialLine="17" containingFunctionPresentation="method 'FindPaths'">
-            <startOffsets>
-              <option value="549" />
-            </startOffsets>
-            <endOffsets>
-              <option value="571" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="7 неделя. Добавлен и проработан класс монстра, добавлен алгоритм поиска в ширину для того чтобы монстр мог находить путь к игроку (не работоспособно, ошибка в алгоритме). Добавлен грид для карты. Установлена библиотека NUnit. Написано несколько юнит тестов на алгоритм." />
+    <option name="LAST_COMMIT_MESSAGE" value="7 неделя. Добавлен и проработан класс монстра, добавлен алгоритм поиска в ширину для того чтобы монстр мог находить путь к игроку (не работоспособно, ошибка в алгоритме). Добавлен грид для карты. Установлена библиотека NUnit. Написано несколько юнит тестов на алгоритм." />
   </component>
 </project>
