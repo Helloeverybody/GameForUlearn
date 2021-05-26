@@ -29,12 +29,10 @@ namespace Model
             Sprite = (Bitmap)Image.FromFile(path);
             ItemsOnMap = new List<OnMapItem>();
             GridScale = 4;
-            AddItemsOnMap();
+            //AddItemsOnMap();
             InitializeGrid();
         }
         
-        
-
         public void InitializeGrid()
         {
             PathfinderGrid = new GridState [Sprite.Size.Width / GridScale, Sprite.Size.Height / GridScale];
@@ -74,9 +72,9 @@ namespace Model
         
         public void AddItemsOnMap()
         {
-            //ItemsOnMap.Add(new OnMapItem("testItem", 20, 20, 10, false, true));
-            //ItemsOnMap.Add(new OnMapItem("testItem", 100, 20, 10, false, true));
-            //ItemsOnMap.Add(new OnMapItem("testItem", 180, 20, 10, true, false));
+            ItemsOnMap.Add(new OnMapItem("testItem", 20, 20, 10, false, true));
+            ItemsOnMap.Add(new OnMapItem("testItem", 100, 20, 10, false, true));
+            ItemsOnMap.Add(new OnMapItem("testItem", 180, 20, 10, true, false));
         }
 
         public void UpdateMap(Player player)

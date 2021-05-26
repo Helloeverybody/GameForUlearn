@@ -30,6 +30,11 @@ namespace Model
         {
             return items.Where(item => item.IsNearby(anchor.X + X, anchor.Y + Y)).ToList();
         }
+        
+        public bool NearbyMonsters(Monster monster, PointF anchor)
+        {
+            return monster.IsNearby(anchor.X + X, anchor.Y + Y);
+        }
 
         public void MovePlayer(Map map)
         {

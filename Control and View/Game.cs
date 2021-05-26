@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
 using Model;
@@ -13,12 +9,12 @@ namespace My_game_for_Ulearn
     public class Game : UserControl
     {
         private readonly MainForm mainForm;
-        private Map Map { get; set; }
-        private Player Player { get; set; }
-        private Timer Timer { get; }
-        private Timer PathFinderTimer { get; }
-        private Monster Monster { get; set; }
-        private SinglyLinkedList<Point> Path { get; set; }
+        private Map Map { get; }
+        private Player Player { get; }
+        private Timer Timer { get; set; }
+        private Timer PathFinderTimer { get; set; }
+        private Timer MonsterMoveTimer { get; set; }
+        private Monster Monster { get; }
         
         public Game(MainForm form)
         {
@@ -28,8 +24,18 @@ namespace My_game_for_Ulearn
             Player = new Player(Size.Width / 2, Size.Height / 2);
             Map = new Map(Size);
 
-            Monster = new Monster(80, 80);
+            Monster = new Monster(1000, 1000);
+
+            InitializeTimers();
             
+            SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                     ControlStyles.AllPaintingInWmPaint |
+                     ControlStyles.UserPaint, true);
+            UpdateStyles();
+        }
+
+        public void InitializeTimers()
+        {
             Timer = new Timer { Interval = 10 };
             Timer.Start();
             Timer.Tick += OnTick;
@@ -38,10 +44,23 @@ namespace My_game_for_Ulearn
             PathFinderTimer.Start();
             PathFinderTimer.Tick += OnPathFinderTick;
             
-            SetStyle(ControlStyles.OptimizedDoubleBuffer |
-                     ControlStyles.AllPaintingInWmPaint |
-                     ControlStyles.UserPaint, true);
-            UpdateStyles();
+            MonsterMoveTimer = new Timer { Interval = 30 };
+            MonsterMoveTimer.Start();
+            MonsterMoveTimer.Tick += OnMoveMonsterTick;
+        }
+
+        public void StopGame()
+        {
+            Timer.Stop();
+            PathFinderTimer.Stop();
+            MonsterMoveTimer.Stop();
+        }
+        
+        public void StartGame()
+        {
+            Timer.Start();
+            PathFinderTimer.Start();
+            MonsterMoveTimer.Start();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -77,19 +96,25 @@ namespace My_game_for_Ulearn
         
         private void OnTick(object sender, EventArgs e)
         {
-            Path = Monster.Move(Path, Map.GridScale);
             Player.MovePlayer(Map);
             Invalidate(); 
         }
         
         private void OnPathFinderTick(object sender, EventArgs e)
         {
-            var playerDistrict = new Point((int) (Map.Anchor.X + Player.X) / Map.GridScale,
-                (int) (Map.Anchor.Y + Player.Y) / Map.GridScale);
-            Path = PathFinder.FindPaths(Map.PathfinderGrid, 
-                playerDistrict, 
-                new Point(Monster.X / Map.GridScale, Monster.Y / Map.GridScale));
-        }        
+            if (Player.NearbyMonsters(Monster, Map.Anchor))
+            {
+                var playerDistrict = new Point((int) (Map.Anchor.X + Player.X) / Map.GridScale,
+                    (int) (Map.Anchor.Y + Player.Y) / Map.GridScale);
+                var monsterDistrict = new Point(Monster.X / Map.GridScale, Monster.Y / Map.GridScale);
+                Monster.Path = PathFinder.FindPaths(Map.PathfinderGrid, playerDistrict, monsterDistrict);
+            }
+        }   
+        
+        private void OnMoveMonsterTick(object sender, EventArgs e)
+        {
+            Monster.Path = Monster.Move(Monster.Path, Map.GridScale);
+        }
         
         protected override void OnKeyDown(KeyEventArgs e)
         {

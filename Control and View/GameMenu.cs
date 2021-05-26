@@ -14,14 +14,24 @@ namespace My_game_for_Ulearn
         {
             mainForm = form;
             ClientSize = Screen.PrimaryScreen.Bounds.Size;
+            
             var continueButton = new Button
             {
                 Text = @"Продолжить",
                 Location = new Point(Size.Width / 3, Size.Height * 7 / 16),
                 Size = new Size(Size.Width / 3, Size.Height / 8)
             };
+            
+            var exitButton = new Button
+            {
+                Text = @"Выход в меню",
+                Location = new Point(Size.Width / 3, Size.Height * 10 / 16),
+                Size = new Size(Size.Width / 3, Size.Height / 8)
+            };
+            
             continueButton.Click += OnContinueButtonClick;
-            Controls.Add(continueButton);
+            exitButton.Click += OnExitButtonClick;
+            Controls.AddRange(new Control[] { continueButton, exitButton });
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -44,6 +54,11 @@ namespace My_game_for_Ulearn
         private void OnContinueButtonClick(object sender, EventArgs e)
         {
             mainForm.ContinueGame();
+        }
+        
+        private void OnExitButtonClick(object sender, EventArgs e)
+        {
+            mainForm.ExitToMainMenu();
         }
     }
 }

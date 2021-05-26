@@ -5,34 +5,34 @@ namespace My_game_for_Ulearn
 {
     public class MainForm : Form
     {
-        public MainMenu MainMenu;
-        public Game Game;
-        public Inventory Inventory;
-        public GameMenu GameMenu;
-        public Dialog Dialog;
+        private MainMenu mainMenu;
+        private Game game;
+        private Inventory inventory;
+        private GameMenu gameMenu;
+        private Dialog dialog;
         
         public MainForm()
         {
-            MainMenu = new MainMenu(this) {Enabled = true};
-            MainMenu.Show();
+            mainMenu = new MainMenu(this) { Enabled = true };
+            mainMenu.Show();
             
-            Game = new Game(this) {Enabled = false};
-            Game.Hide();
+            game = new Game(this) { Enabled = false };
+            game.Hide();
             
-            Inventory = new Inventory(this) {Enabled = false};
-            Inventory.Hide();
+            inventory = new Inventory(this) { Enabled = false };
+            inventory.Hide();
             
-            GameMenu = new GameMenu(this) {Enabled = false};
-            GameMenu.Hide();
+            gameMenu = new GameMenu(this) { Enabled = false };
+            gameMenu.Hide();
             
-            Dialog = new Dialog(this) {Enabled = false};
-            Dialog.Hide();
+            dialog = new Dialog(this) { Enabled = false };
+            dialog.Hide();
             
             SuspendLayout();
             Text = "Game";
             WindowState = FormWindowState.Maximized;
             ClientSize = Screen.PrimaryScreen.Bounds.Size;
-            Controls.AddRange(new Control[] {MainMenu, Game, Inventory, GameMenu, Dialog});
+            Controls.AddRange(new Control[] {mainMenu, game, inventory, gameMenu, dialog});
             ResumeLayout(false);
             
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
@@ -43,39 +43,47 @@ namespace My_game_for_Ulearn
 
         public void StartGame()
         {
-            FromControlToControl(MainMenu, Game);
+            FromControlToControl(mainMenu, game);
         }
         
         public void PauseGame()
         {
-            FromControlToControl(Game, GameMenu);
-        }
-        
-        public void OpenInventory()
-        {
-            FromControlToControl(Game, Inventory);
-        }
-        
-        public void CloseInventory()
-        {
-            FromControlToControl(Inventory, Game);
+            game.StopGame();
+            FromControlToControl(game, gameMenu);
         }
         
         public void ContinueGame()
         {
-            FromControlToControl(GameMenu, Game);
+            game.StartGame();
+            FromControlToControl(gameMenu, game);
+        }
+        
+        public void OpenInventory()
+        {
+            FromControlToControl(game, inventory);
+        }
+        
+        public void CloseInventory()
+        {
+            FromControlToControl(inventory, game);
+        }
+        
+        public void ExitToMainMenu()
+        {
+            FromControlToControl(gameMenu, mainMenu);
         }
         
         public void StartDialog()
         {
-            FromControlToControl(Game, Dialog);
+            FromControlToControl(game, dialog);
         }
+        
         public void EndDialog()
         {
-            FromControlToControl(Dialog, Game);
+            FromControlToControl(dialog, game);
         }
 
-        public void FromControlToControl(UserControl fromThis, UserControl toThis)
+        private static void FromControlToControl(UserControl fromThis, UserControl toThis)
         {
             fromThis.Enabled = false;
             fromThis.Hide();

@@ -19,20 +19,35 @@ namespace My_game_for_Ulearn
         private void InitializeComponent()
         {
             ClientSize = Screen.PrimaryScreen.Bounds.Size;
+            
             var playButton = new Button
             {
                 Text = @"Играть",
                 Location = new Point(Size.Width / 3, Size.Height * 7 / 16),
                 Size = new Size(Size.Width / 3, Size.Height / 8)
             };
+            
+            var exitButton = new Button
+            {
+                Text = @"Выход",
+                Location = new Point(Size.Width / 3, Size.Height * 10 / 16),
+                Size = new Size(Size.Width / 3, Size.Height / 8)
+            };
 
+            exitButton.Click += OnExitButtonClick;
             playButton.Click += OnPlayButtonClick;
-            Controls.Add(playButton);
+            
+            Controls.AddRange(new Control[]{ playButton, exitButton });
         }
 
         private void OnPlayButtonClick(object sender, EventArgs e)
         {
             mainForm.StartGame();
+        }
+        
+        private void OnExitButtonClick(object sender, EventArgs e)
+        {
+            mainForm.Close();
         }
         
         protected override void OnPaint(PaintEventArgs e)

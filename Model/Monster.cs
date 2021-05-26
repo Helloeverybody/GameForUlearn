@@ -7,8 +7,8 @@ namespace Model
     {
         public int X;
         public int Y;
-
-        public Bitmap Sprite;
+        public readonly Bitmap Sprite;
+        public SinglyLinkedList<Point> Path { get; set; }
 
         public Monster(int x, int y)
         {
@@ -25,6 +25,11 @@ namespace Model
             X = path.Value.X * gridScale;
             Y = path.Value.Y * gridScale;
             return path.Previous;
+        }
+        
+        public bool IsNearby(float x, float y)
+        {
+            return Math.Sqrt((x - X) * (x - X) + (y - Y) * (y - Y)) <= 300;
         }
     }
 }

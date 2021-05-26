@@ -55,8 +55,6 @@ namespace ModelTests
             Assert.AreEqual(end, path.Value);
             Assert.AreEqual(5, path.Length);
         }
-        
-        //TODO написать тесты для остальных методов класса Pathfinder
 
         // [TestCase(1, 1,
         //     0, 1,
@@ -91,7 +89,7 @@ namespace ModelTests
         {
             var map = InitializeMap(10, 10);
             var visited = new HashSet<Point> {new Point(visitedX, visitedY)};
-            Assert.AreEqual(expected, PathFinder.IsPointAvailable(map, new Point (x, y), visited));
+            Assert.AreEqual(expected, PathFinder.IsPointAvailable(map, new Point (x, y), visited, new Point (0, 0)));
         }
         
         [TestCase(0, 0, true)]
@@ -105,7 +103,7 @@ namespace ModelTests
         public void InBoundsTests(int x, int y, bool expected)
         {
             var map = InitializeMap(5, 5);
-            Assert.AreEqual(expected, PathFinder.InBounds(new Point (x, y), map));
+            Assert.AreEqual(expected, PathFinder.InBounds(new Point (x, y), map, new Point (0, 0)));
         }
         
         private static GridState[,] InitializeMap(int x, int y)
