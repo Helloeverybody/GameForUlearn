@@ -33,7 +33,7 @@ namespace Model
 
         public List<OnMapItem> NearbyItems(IEnumerable<OnMapItem> items, PointF anchor)
         {
-            return items.Where(item => item.IsNearby(anchor.X + X, anchor.Y + Y)).ToList();
+            return items.Where(item => item.CheckIsNearby(anchor.X + X, anchor.Y + Y)).ToList();
         }
         
         public bool NearbyMonsters(Monster monster, PointF anchor)

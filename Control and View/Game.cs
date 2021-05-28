@@ -90,29 +90,51 @@ namespace My_game_for_Ulearn
         //                     Size.Width, Size.Height, GraphicsUnit.Pixel);
         //             }
         //         }
-
+        
         protected override void OnPaint(PaintEventArgs e)
         {
              //TODO отрисовка тормозит, поправить
              var g = e.Graphics;
-             
-             var rect = new Rectangle(new Point(0, 0), Size);
-             g.DrawImage(Map.MapSprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
-             
-             g.DrawImage(Player.Sprite, Player.X - Player.Sprite.Width / 2, Player.Y - Player.Sprite.Height);
-            
-             g.DrawImage(Monster.Sprite, rect, Map.Anchor.X - Monster.X, Map.Anchor.Y - Monster.Y + Monster.Sprite.Height, 
-                 Size.Width, Size.Height, GraphicsUnit.Pixel);
-             
-             g.FillRectangle(Brushes.Black, Size.Width / 80, Size.Height / 40, Size.Width / 3, Size.Height / 10);
-             g.FillRectangle(Brushes.Gray, Size.Width / 40, Size.Height / 20, Size.Width * 31 / 100, Size.Height / 20);
-             g.FillRectangle(Brushes.RosyBrown, Size.Width / 40, Size.Height / 20,
-              Player.MadnessScale.Value * Size.Width * 31 / (100 * Player.MadnessScale.maxValue) , Size.Height / 20);
+             DrawGame(g);
+             DrawInterface(g);
+        }
+
+        private void DrawGame(Graphics g)
+        {
+            var rect = new Rectangle(new Point(0, 0), Size);
+            g.DrawImage(Map.MapSprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
+            g.DrawImage(Player.Sprite, Player.X - Player.Sprite.Width / 2, Player.Y - Player.Sprite.Height);
+            g.DrawImage(Monster.Sprite, rect, Map.Anchor.X - Monster.X, Map.Anchor.Y - Monster.Y + Monster.Sprite.Height, 
+                Size.Width, Size.Height, GraphicsUnit.Pixel);
+        }
+        
+        private void DrawInterface(Graphics g)
+        {
+            g.FillRectangle(Brushes.Black, Size.Width / 80, Size.Height / 40, Size.Width / 3, Size.Height / 10);
+            g.FillRectangle(Brushes.Gray, Size.Width / 40, Size.Height / 20, Size.Width * 31 / 100, Size.Height / 20);
+            g.FillRectangle(Brushes.RosyBrown, Size.Width / 40, Size.Height / 20,
+                Player.MadnessScale.Value * Size.Width * 31 / (100 * Player.MadnessScale.maxValue) , Size.Height / 20);
         }
         
         private void OnTick(object sender, EventArgs e)
         {
             Player.MovePlayer(Map);
+
+            var unhighlightedItems = Map.ItemsNearPlayer.Where(x => !x.IsHighlighted);
+            if (unhighlightedItems.Count() != 0)
+            {
+                Map.RedrawMap();
+                foreach (var item in unhighlightedItems)
+                    item.IsHighlighted = true;
+            }
+            
+            var highlightedItems = Map.ItemsOnMap.Where(x => x.IsHighlighted && !x.IsNearby);
+            if (highlightedItems.Count() != 0)
+            {
+                Map.RedrawMap();
+                foreach (var item in highlightedItems)
+                    item.IsHighlighted = false;
+            }
             
             if (Player.Damaging(Monster, Map.Anchor))
                 Player.MadnessScale.Value++;
@@ -150,7 +172,7 @@ namespace My_game_for_Ulearn
                     mainForm.StartDialog();
                 
                 if (Map.ItemsNearPlayer.Count(x => x.IsPickable) != 0)
-                    Map.PickUpItem(Player.Inventory);
+                    Map.PickUpItem(Player);
             }
 
             if (e.KeyCode == Keys.Escape)
