@@ -1,0 +1,13 @@
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\bin\Release\My_game_for_Ulearn.exe.config
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\bin\Release\My_game_for_Ulearn.exe
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\bin\Release\My_game_for_Ulearn.pdb
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\bin\Release\Model.dll
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\bin\Release\Model.pdb
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\Control and View.csprojAssemblyReference.cache
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\My_game_for_Ulearn.MainForm.resources
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\My_game_for_Ulearn.Properties.Resources.resources
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\Control and View.csproj.GenerateResource.cache
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\Control and View.csproj.CoreCompileInputs.cache
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\Control and View.csproj.CopyComplete
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\My_game_for_Ulearn.exe
+C:\Users\Vsevolod\RiderProjects\MygameforUlearn\Control and View\obj\Release\My_game_for_Ulearn.pdb

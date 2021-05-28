@@ -25,6 +25,7 @@ namespace My_game_for_Ulearn
         protected override void OnPaint(PaintEventArgs e)
         {
             var g = e.Graphics;
+            
             var font = new Font("SlimamifMedium", 80, FontStyle.Bold, GraphicsUnit.Pixel);
             g.DrawString("Инвентарь", font, Brushes.Black, new PointF(Size.Width / 9, 
                 Size.Height * 2 / 3), StringFormat.GenericTypographic);

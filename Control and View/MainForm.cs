@@ -17,9 +17,6 @@ namespace My_game_for_Ulearn
             mainMenu = new MainMenu(this) { Enabled = true };
             mainMenu.Show();
             
-            game = new Game(this) { Enabled = false };
-            game.Hide();
-            
             inventory = new Inventory(this) { Enabled = false };
             inventory.Hide();
             
@@ -48,7 +45,9 @@ namespace My_game_for_Ulearn
         public void StartGame()
         {
             //костыль, игра должна начинаться с начала
-            game.StartGame();
+            game = new Game(this) { Enabled = false };
+            game.Hide();
+            Controls.Add(game);
             FromControlToControl(mainMenu, game);
         }
         

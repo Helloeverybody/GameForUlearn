@@ -18,15 +18,15 @@ namespace My_game_for_Ulearn
         
         public Game(MainForm form)
         {
-            ClientSize = Screen.PrimaryScreen.Bounds.Size;
             mainForm = form;
-            
-            Player = new Player(Size.Width / 2, Size.Height / 2);
+            ClientSize = mainForm.ClientSize;
             Map = new Map(Size);
-
+            Player = new Player(Size.Width / 2, Size.Height / 2);
+            
             Monster = new Monster(1000, 1000);
 
             InitializeTimers();
+            Map.RedrawMap();
             
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
                      ControlStyles.AllPaintingInWmPaint |
@@ -63,58 +63,64 @@ namespace My_game_for_Ulearn
             MonsterMoveTimer.Start();
         }
 
+        private void DrawInterface()
+        {
+            
+        }
+
+        // private void RedrawMap()
+        //         {
+        //             var g = Graphics.FromImage(MapSprite);
+        //             var rect = new Rectangle(new Point(0, 0), MapSprite.Size);
+        //             
+        //             g.DrawImage(Map.Sprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
+        //             
+        //             foreach (var item in Map.ItemsOnMap)
+        //             {
+        //                 g.DrawImage(item.ItemSprite, rect, item.OnMapCoordinates.X, item.OnMapCoordinates.Y,
+        //                     Size.Width, Size.Height, GraphicsUnit.Pixel);
+        //             }
+        //             
+        //             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\eIcon.png";
+        //             var eIcon = (Bitmap)Image.FromFile(path);
+        //             
+        //             foreach (var itemCoords in Map.ItemsNearPlayer.Select(item => Map.GetOnMapCoordinates(item.X, item.Y - 40)))
+        //             {
+        //                 g.DrawImage(eIcon, rect, itemCoords.X, itemCoords.Y, 
+        //                     Size.Width, Size.Height, GraphicsUnit.Pixel);
+        //             }
+        //         }
+
         protected override void OnPaint(PaintEventArgs e)
         {
-            //TODO отрисовка тормозит, поправить
-            var g = e.Graphics;
+             //TODO отрисовка тормозит, поправить
+             var g = e.Graphics;
+             
+             var rect = new Rectangle(new Point(0, 0), Size);
+             g.DrawImage(Map.MapSprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
+             
+             g.DrawImage(Player.Sprite, Player.X - Player.Sprite.Width / 2, Player.Y - Player.Sprite.Height);
             
-            var rect = new Rectangle(new Point(0, 0), Size);
-            
-            g.DrawImage(Map.Sprite, rect, Map.Anchor.X, Map.Anchor.Y, Size.Width, Size.Height, GraphicsUnit.Pixel);
-
-            foreach (var item in Map.ItemsOnMap)
-            {
-                g.DrawImage(item.ItemSprite, rect, item.OnMapCoordinates.X, item.OnMapCoordinates.Y,
-                    Size.Width, Size.Height, GraphicsUnit.Pixel);
-            }
-
-            g.DrawImage(Player.Sprite, Player.X - Player.Sprite.Width / 2, Player.Y - Player.Sprite.Height);
-            
-            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\eIcon.png";
-            var eIcon = (Bitmap)Image.FromFile(path);
-            
-            
-            foreach (var itemCoords in Map.ItemsNearPlayer.Select(item => Map.GetOnMapCoordinates(item.X, item.Y - 40)))
-            {
-                g.DrawImage(eIcon, rect, itemCoords.X, itemCoords.Y,
-                    Size.Width, Size.Height, GraphicsUnit.Pixel);
-            }
-            
-            g.DrawImage(Monster.Sprite, rect, Map.Anchor.X - Monster.X, Map.Anchor.Y - Monster.Y + Monster.Sprite.Height,
-                Size.Width, Size.Height, GraphicsUnit.Pixel);
-
-            g.FillRectangle(Brushes.Black, Size.Width / 80, Size.Height / 40, Size.Width / 3, Size.Height / 10);
-            g.FillRectangle(Brushes.Gray, Size.Width / 40, Size.Height / 20, Size.Width * 31 / 100, Size.Height / 20);
-            g.FillRectangle(Brushes.RosyBrown, Size.Width / 40, Size.Height / 20,
-                Player.MadnessScale.Value * Size.Width * 31 / (100 * Player.MadnessScale.maxValue) , Size.Height / 20);
+             g.DrawImage(Monster.Sprite, rect, Map.Anchor.X - Monster.X, Map.Anchor.Y - Monster.Y + Monster.Sprite.Height, 
+                 Size.Width, Size.Height, GraphicsUnit.Pixel);
+             
+             g.FillRectangle(Brushes.Black, Size.Width / 80, Size.Height / 40, Size.Width / 3, Size.Height / 10);
+             g.FillRectangle(Brushes.Gray, Size.Width / 40, Size.Height / 20, Size.Width * 31 / 100, Size.Height / 20);
+             g.FillRectangle(Brushes.RosyBrown, Size.Width / 40, Size.Height / 20,
+              Player.MadnessScale.Value * Size.Width * 31 / (100 * Player.MadnessScale.maxValue) , Size.Height / 20);
         }
         
         private void OnTick(object sender, EventArgs e)
         {
             Player.MovePlayer(Map);
+            
             if (Player.Damaging(Monster, Map.Anchor))
-            {
                 Player.MadnessScale.Value++;
-            }
             else if(Player.MadnessScale.Value != Player.MadnessScale.minValue)
-            {
                 Player.MadnessScale.Value--;
-            }
 
             if (Player.MadnessScale.Value >= Player.MadnessScale.maxValue) 
-            {
                 mainForm.Die();
-            }
             Invalidate();
         }
         

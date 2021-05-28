@@ -15,6 +15,8 @@ namespace Model
         public int X;
         public int Y;
 
+        public bool IsHighlighed;
+
         public PointF OnMapCoordinates;
 
         public OnMapItem(string name, int x, int y, int weight, bool isDialogable, bool isPickable)
@@ -28,6 +30,8 @@ namespace Model
 
             IsDialogable = isDialogable;
             IsPickable = isPickable;
+
+            IsHighlighed = false;
             
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\woodLog.png";
             ItemSprite = Image.FromFile(path);
@@ -35,7 +39,9 @@ namespace Model
         
         public bool IsNearby(float x, float y)
         {
-            return Math.Sqrt((x - X) * (x - X) + (y - Y) * (y - Y)) <= 100;
+            var isNearby = Math.Sqrt((x - X) * (x - X) + (y - Y) * (y - Y)) <= 100;
+            IsHighlighed = isNearby;
+            return isNearby;
         }
 
         public void ToInventory()

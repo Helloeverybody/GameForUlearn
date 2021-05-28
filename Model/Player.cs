@@ -25,6 +25,7 @@ namespace Model
             Y = y;
 
             MadnessScale = new Scale();
+            Inventory = new Inventory();
             
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Player.png";
             Sprite = Image.FromFile(path);

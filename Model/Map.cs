@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace Model
 {
@@ -21,18 +22,47 @@ namespace Model
         public List<OnMapItem> ItemsOnMap { get; set; }
         public List<OnMapItem> ItemsNearPlayer { get; set; } 
         
+        public Bitmap MapSprite;
+
+        private Size formSize;
+        
         public Map(Size size)
         {
             var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\Map.png";
             move = new PointF(0, 0);
-            Anchor = new PointF(size.Width, size.Height);
+            Anchor = new PointF(0, 0);
             Sprite = (Bitmap)Image.FromFile(path);
             GridScale = 4;
             ItemsOnMap = new List<OnMapItem>();
             ItemsNearPlayer = new List<OnMapItem>();
+            MapSprite = new Bitmap(Sprite.Width, Sprite.Height);
+            formSize = size;
             
-            //AddItemsOnMap();
+            AddItemsOnMap();
             InitializeGrid();
+        }
+        
+        public void RedrawMap()
+        {
+            var g = Graphics.FromImage(MapSprite);
+            var rect = new Rectangle(new Point(0, 0), new Size(MapSprite.Size.Width, MapSprite.Size.Height));
+            
+            g.DrawImage(Sprite, rect, Anchor.X, Anchor.Y, MapSprite.Size.Width, MapSprite.Size.Height, GraphicsUnit.Pixel);
+            
+            foreach (var item in ItemsOnMap)
+            {
+                g.DrawImage(item.ItemSprite, rect, item.OnMapCoordinates.X, item.OnMapCoordinates.Y,
+                    MapSprite.Size.Width, MapSprite.Size.Height, GraphicsUnit.Pixel);
+            }
+            
+            var path = AppDomain.CurrentDomain.BaseDirectory + @"Assets\eIcon.png";
+            var eIcon = (Bitmap)Image.FromFile(path);
+
+            foreach (var item in ItemsNearPlayer)
+            {
+                g.DrawImage(eIcon, rect, item.X, item.Y, 
+                    MapSprite.Size.Width, MapSprite.Size.Height, GraphicsUnit.Pixel);
+            }
         }
         
         public void InitializeGrid()
@@ -74,9 +104,9 @@ namespace Model
         
         public void AddItemsOnMap()
         {
-            ItemsOnMap.Add(new OnMapItem("testItem", 20, 20, 10, false, true));
-            ItemsOnMap.Add(new OnMapItem("testItem", 100, 20, 10, false, true));
-            ItemsOnMap.Add(new OnMapItem("testItem", 180, 20, 10, true, false));
+            ItemsOnMap.Add(new OnMapItem("testItem", 10, 10, 10, false, true));
+            ItemsOnMap.Add(new OnMapItem("testItem", -50, -50, 10, false, true));
+            ItemsOnMap.Add(new OnMapItem("testItem", -100, -100, 10, false, true));
         }
 
         public void UpdateMap(Player player)
@@ -89,9 +119,9 @@ namespace Model
         public void PickUpItem(Inventory inventory)
         {
             var item = ItemsNearPlayer.First();
-            //TODO выдает эксепшн, поправить
-            //inventory.Add(item);
+            inventory.Add(item);
             ItemsOnMap.Remove(item);
+            RedrawMap();
         }
     }
 }
