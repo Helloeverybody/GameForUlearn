@@ -35,10 +35,5 @@ namespace Model
             IsNearby = isNearby;
             return isNearby;
         }
-
-        public void ToInventory()
-        {
-            
-        }
     }
 }

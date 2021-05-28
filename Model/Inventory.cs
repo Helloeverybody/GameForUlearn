@@ -5,35 +5,49 @@ namespace Model
 {
     public class Inventory
     {
-        private List<InventoryItem> inventory = new List<InventoryItem>();
+        private Dictionary<int, InventoryItem> inventory = new Dictionary<int, InventoryItem>();
+
+        public int Count => inventory.Count;
+
+        public int Capacity = 25;
 
         public int InventoryWeight
         {
             get
             {
                 var weight = 0;
-                inventory.Select(x => weight += x.Weight);
+                inventory.Select(x => weight += x.Value.Weight);
                 return weight;
             }
         }
 
-        public void Add(OnMapItem onMapItem)
+        public InventoryItem this[int index]
         {
-            inventory.Add(new InventoryItem
-            {
-                Weight = onMapItem.Weight
-            });
+            get { return inventory[index]; }
         }
 
-        public void Drop(InventoryItem inventoryItem)
+        public bool Add(OnMapItem onMapItem)
         {
-            inventoryItem.OnMap();
-            inventory.Remove(inventoryItem);
+            if (inventory.Count == Capacity)
+                return false;
+            inventory[inventory.Count] = new InventoryItem
+            {
+                Weight = onMapItem.Weight,
+                Sprite = onMapItem.Sprite,
+                Name = onMapItem.Name
+            };
+            return true;
+        }
+
+        public void Drop(int cellNumber)
+        {
+            //inventoryItem.OnMap();
+            inventory[cellNumber] = new InventoryItem();
         }
         
         public void Clear()
         {
-            inventory = new List<InventoryItem>();
+            inventory = new Dictionary<int, InventoryItem>();
         }
     }
 }

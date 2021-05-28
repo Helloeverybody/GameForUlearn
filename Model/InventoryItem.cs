@@ -4,11 +4,11 @@ namespace Model
 {
     public class InventoryItem
     {
-        public Image itemSprite;
+        public string Name;
+        public Image Sprite;
         public int Weight;
-        public int CellNumber;
 
-        public void OnMap()
+        public InventoryItem()
         {
             
         }

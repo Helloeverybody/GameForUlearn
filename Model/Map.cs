@@ -56,7 +56,7 @@ namespace Model
             // ПАМЯТКА ПО DrawImage (потому что документация говно)
             //
             // Ректангл                  - задает размер и положение прямоугольника, в котором рисуется изображение
-            // Поинт в ректангле         - задает расположение ректангла
+            // Поинт в ректангле         - задает расположение верхнего левого угла ректангла
             // Сайз в ректангле          - задает размер ректангла
             // ширина-высота в DrawImage - задает ширину-высоту картинки, которая рисуется в ректангле
             // координаты в DrawImage    - задают отрицательное смещение относительно верхнего левого угла ректангла
@@ -73,19 +73,21 @@ namespace Model
         }
 
         // в разработке ////////////////////////////////////////////////////////////////////////////////////////////////
-        public void EraseItem(OnMapItem item)
-        {
-            var g = Graphics.FromImage(MapSprite);
-            var rect = new Rectangle(new Point(item.X - item.Sprite.Width / 2, item.Y - item.Sprite.Height / 2), new Size(100, 100));
-            g.DrawImage(MapSprite, rect, 0, 0, 100, 100, GraphicsUnit.Pixel);
-        }
-        
-        public void DrawItem(OnMapItem item)
-        {
-            var g = Graphics.FromImage(MapSprite);
-            var itemRect = new Rectangle(new Point(item.X - item.Sprite.Width / 2, item.Y - item.Sprite.Height / 2), new Size(100, 100));
-            g.DrawImage(item.Sprite, itemRect, 0, 0, 100, 100, GraphicsUnit.Pixel);
-        }
+        // public void EraseItem(OnMapItem item)
+        // {
+        //     var g = Graphics.FromImage(MapSprite);
+        //     var rect = new Rectangle(new Point(item.X - item.Sprite.Width / 2, 
+        //         item.Y - item.Sprite.Height / 2), new Size(100, 100));
+        //     g.DrawImage(MapSprite, rect, 0, 0, 100, 100, GraphicsUnit.Pixel);
+        // }
+        //
+        // public void DrawItem(OnMapItem item)
+        // {
+        //     var g = Graphics.FromImage(MapSprite);
+        //     var itemRect = new Rectangle(new Point(item.X - item.Sprite.Width / 2, 
+        //         item.Y - item.Sprite.Height / 2), new Size(100, 100));
+        //     g.DrawImage(item.Sprite, itemRect, 0, 0, 100, 100, GraphicsUnit.Pixel);
+        // }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         private void InitializeGrid()
@@ -135,7 +137,7 @@ namespace Model
         public void PickUpItem(Player player)
         {
             var item = ItemsNearPlayer.First();
-            player.Inventory.Add(item);
+            if (!player.Inventory.Add(item)) return;
             ItemsOnMap.Remove(item);
             UpdateMap(player);
             RedrawMap();

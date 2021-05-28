@@ -10,7 +10,7 @@ namespace My_game_for_Ulearn
     {
         private readonly MainForm mainForm;
         private Map Map { get; }
-        private Player Player { get; }
+        public Player Player { get; }
         private Timer Timer { get; set; }
         private Timer PathFinderTimer { get; set; }
         private Timer MonsterMoveTimer { get; set; }
@@ -61,11 +61,6 @@ namespace My_game_for_Ulearn
             Timer.Start();
             PathFinderTimer.Start();
             MonsterMoveTimer.Start();
-        }
-
-        private void DrawInterface()
-        {
-            
         }
 
         // private void RedrawMap()
@@ -179,7 +174,9 @@ namespace My_game_for_Ulearn
                 mainForm.PauseGame();
 
             if (e.KeyCode == Keys.F)
+            {
                 mainForm.OpenInventory();
+            }
         }
         
         protected override void OnKeyUp(KeyEventArgs e)

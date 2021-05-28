@@ -1,24 +1,22 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using Model;
 
 namespace My_game_for_Ulearn
 {
     public class MainForm : Form
     {
-        private MainMenu mainMenu;
         private Game game;
-        private Inventory inventory;
-        private GameMenu gameMenu;
-        private Dialog dialog;
         private Dead dead;
+        private Dialog dialog;
+        private GameMenu gameMenu;
+        private MainMenu mainMenu;
+        public Inventory inventory;
         
         public MainForm()
         {
             mainMenu = new MainMenu(this) { Enabled = true };
             mainMenu.Show();
-            
-            inventory = new Inventory(this) { Enabled = false };
-            inventory.Hide();
             
             gameMenu = new GameMenu(this) { Enabled = false };
             gameMenu.Hide();
@@ -41,6 +39,8 @@ namespace My_game_for_Ulearn
                      ControlStyles.UserPaint, true);
             UpdateStyles();
         }
+
+        
 
         public void StartGame()
         {
@@ -65,11 +65,15 @@ namespace My_game_for_Ulearn
         
         public void OpenInventory()
         {
+            inventory = new Inventory(this, game.Player.Inventory);
+            Controls.Add(inventory);
+            game.StopGame();
             FromControlToControl(game, inventory);
         }
         
         public void CloseInventory()
         {
+            game.StartGame();
             FromControlToControl(inventory, game);
         }
         
@@ -80,11 +84,13 @@ namespace My_game_for_Ulearn
         
         public void StartDialog()
         {
+            game.StopGame();
             FromControlToControl(game, dialog);
         }
         
         public void EndDialog()
         {
+            game.StartGame();
             FromControlToControl(dialog, game);
         }
         
